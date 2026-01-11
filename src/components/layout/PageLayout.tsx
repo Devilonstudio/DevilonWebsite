@@ -1,0 +1,26 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import Header from "./Header";
+import Footer from "./Footer";
+
+interface PageLayoutProps {
+  children: React.ReactNode;
+}
+
+const PageLayout = ({ children }: PageLayoutProps) => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </div>
+  );
+};
+
+export default PageLayout;
