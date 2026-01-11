@@ -1,49 +1,11 @@
-import { Code, Cloud, Smartphone, Palette, Brain, Layers } from "lucide-react";
-
-const services = [
-  {
-    icon: Code,
-    title: "Custom Software Development",
-    description:
-      "Tailored software solutions designed to address your unique business challenges and streamline operations.",
-  },
-  {
-    icon: Layers,
-    title: "SaaS Product Development",
-    description:
-      "End-to-end SaaS development from ideation to launch, built for scale with modern cloud architecture.",
-  },
-  {
-    icon: Smartphone,
-    title: "Web & Mobile App Development",
-    description:
-      "Cross-platform mobile apps and responsive web applications that deliver seamless user experiences.",
-  },
-  {
-    icon: Cloud,
-    title: "Cloud & DevOps Solutions",
-    description:
-      "Cloud migration, infrastructure automation, and DevOps practices to optimize your development lifecycle.",
-  },
-  {
-    icon: Palette,
-    title: "UI/UX Design",
-    description:
-      "User-centered design that combines aesthetics with functionality to create intuitive digital experiences.",
-  },
-  {
-    icon: Brain,
-    title: "AI & Data Solutions",
-    description:
-      "Leverage artificial intelligence and data analytics to unlock insights and automate processes.",
-  },
-];
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+import { services } from "@/data/services";
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-24 lg:py-32 bg-background">
+    <section className="py-24 lg:py-32 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
-        {/* Section header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-4 block">
             Our Services
@@ -58,14 +20,14 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        {/* Services grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <div
-                key={service.title}
-                className="group bg-card rounded-2xl p-8 border border-border card-hover cursor-pointer"
+              <Link
+                key={service.id}
+                to={`/services/${service.id}`}
+                className="group bg-card rounded-2xl p-8 border border-border card-hover"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent transition-colors duration-300">
@@ -74,10 +36,14 @@ const ServicesSection = () => {
                 <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {service.description}
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  {service.shortDescription}
                 </p>
-              </div>
+                <span className="inline-flex items-center text-accent text-sm font-medium">
+                  Learn More
+                  <ArrowRight className="ml-1 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Link>
             );
           })}
         </div>
