@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import  dark  from "@/assets/dark.png";
+import  light  from "@/assets/light.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,14 +42,20 @@ const Header = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center">
-              <span className="text-accent-foreground font-bold text-xl">N</span>
-            </div>
-            <span className={`font-bold text-xl ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
-              NexaTech
-            </span>
-          </Link>
+          <Link to="/" className="flex items-center gap-3">
+          <img src={isScrolled ? dark : light}
+            alt="Devilon Logo"
+            className="w-12 h-12 object-contain transition-all duration-300"
+        />
+
+  <span
+    className={`font-extrabold text-4xl leading-none tracking-tight transition-colors duration-300 ${
+      isScrolled ? "text-foreground" : "text-primary-foreground"
+    }`}
+  >
+    DEVILON
+  </span>
+</Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">

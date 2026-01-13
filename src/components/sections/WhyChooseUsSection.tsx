@@ -41,7 +41,7 @@ const WhyChooseUsSection = () => {
           {/* Left content */}
           <div>
             <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-4 block">
-              Why NexaTech
+              Why Devilon
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6">
               Partner with a Team That{" "}

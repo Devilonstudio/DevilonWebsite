@@ -1,18 +1,15 @@
 const TrustedBySection = () => {
   const companies = [
-    "TechCorp",
-    "InnovateLab",
-    "CloudScale",
-    "DataFlow",
-    "Nexus AI",
-    "SwiftPay",
+    "Sugarwish",
+    "Shahzadsky",
+    "Noctem",
   ];
 
   return (
     <section className="py-16 bg-background border-b border-border">
       <div className="container mx-auto px-4 lg:px-8">
         <p className="text-center text-muted-foreground text-sm font-medium mb-10">
-          Trusted by startups and enterprises worldwide
+          Trusted by startups and SMEs worldwide
         </p>
         
         <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">

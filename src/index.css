@@ -16,8 +16,9 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    /* Deep indigo primary */
-    --primary: 213 55% 20%;
+    /* Light blue primary */
+    --primary1: 213 55% 20%;
+    --primary: 217 91% 55%;
     --primary-foreground: 210 40% 98%;
 
     /* Soft blue-gray secondary */
@@ -27,9 +28,9 @@
     --muted: 214 32% 91%;
     --muted-foreground: 215 16% 47%;
 
-    /* Cyan accent for CTAs */
-    --accent: 188 100% 42%;
-    --accent-foreground: 222 47% 11%;
+    /* Blue accent for CTAs */
+    --accent: 217 91% 50%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
@@ -69,7 +70,8 @@
     --popover: 222 47% 8%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 188 100% 50%;
+    --primary1: 213 55% 20%;
+    --primary: 217 91% 60%;
     --primary-foreground: 222 47% 11%;
 
     --secondary: 217 33% 17%;
@@ -78,8 +80,8 @@
     --muted: 217 33% 17%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 188 100% 42%;
-    --accent-foreground: 222 47% 11%;
+    --accent: 217 91% 55%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;

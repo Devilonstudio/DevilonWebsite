@@ -14,7 +14,7 @@ const HeroSection = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 border border-primary-foreground/20 mb-8 animate-fade-up">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
             <span className="text-primary-foreground/90 text-sm font-medium">
-              Trusted by 200+ companies worldwide
+              Trusted by 20+ companies worldwide
             </span>
           </div>
 
@@ -46,9 +46,9 @@ const HeroSection = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-10 border-t border-primary-foreground/10 animate-fade-up delay-400">
             {[
-              { value: "200+", label: "Projects Delivered" },
-              { value: "50+", label: "Expert Engineers" },
-              { value: "15+", label: "Years Experience" },
+              { value: "20+", label: "Projects Delivered" },
+              { value: "4+", label: "Expert Engineers" },
+              { value: "1+", label: "Years Experience" },
               { value: "98%", label: "Client Satisfaction" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">

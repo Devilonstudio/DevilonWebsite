@@ -1,20 +1,43 @@
 const technologies = [
+  // Frontend
   { name: "React", category: "Frontend" },
   { name: "Next.js", category: "Frontend" },
-  { name: "Vue.js", category: "Frontend" },
-  { name: "TypeScript", category: "Language" },
+  { name: "HTML & CSS", category: "Frontend" },
+  { name: "Tailwind CSS", category: "Frontend" },
+
+  // Backend & Languages
   { name: "Node.js", category: "Backend" },
   { name: "Python", category: "Backend" },
-  { name: "Java", category: "Backend" },
-  { name: "Go", category: "Backend" },
-  { name: "AWS", category: "Cloud" },
-  { name: "Azure", category: "Cloud" },
-  { name: "Google Cloud", category: "Cloud" },
-  { name: "Docker", category: "DevOps" },
-  { name: "Kubernetes", category: "DevOps" },
-  { name: "PostgreSQL", category: "Database" },
+  { name: "JavaScript", category: "Language" },
+  { name: "C++", category: "Language" },
+
+  // Mobile
+  { name: "Flutter", category: "Mobile" },
+  { name: "Native iOS", category: "Mobile" },
+
+  // Databases
   { name: "MongoDB", category: "Database" },
-  { name: "Redis", category: "Database" },
+  { name: "MySQL", category: "Database" },
+  { name: "MS SQL Server", category: "Database" },
+
+  // Automation & Data
+  { name: "n8n", category: "Automation" },
+  { name: "Retool", category: "Automation" },
+  { name: "Power BI", category: "Data" },
+  { name: "ETL / ELT Pipelines", category: "Data" },
+
+  // DevOps & Cloud
+  { name: "Docker", category: "DevOps" },
+  { name: "AWS", category: "Cloud" },
+
+  // Creative & Visualization
+  { name: "Blender", category: "Creative" },
+  { name: "DaVinci Resolve", category: "Creative" },
+  { name: "Adobe Suite", category: "Creative" },
+
+  // Networking & IoT
+  { name: "Cisco Packet Tracer", category: "Networking" },
+  { name: "Adafruit IO", category: "IoT" },
 ];
 
 const TechnologiesSection = () => {
@@ -51,7 +74,7 @@ const TechnologiesSection = () => {
 
         {/* Categories legend */}
         <div className="flex flex-wrap justify-center gap-6 mt-12 text-sm">
-          {["Frontend", "Backend", "Cloud", "DevOps", "Database"].map((category) => (
+          {[ "Frontend","Backend","Language","Mobile","Database", "Automation","Data","DevOps","Networking", "IoT",].map((category) => (
             <div key={category} className="flex items-center gap-2">
               <div className="w-3 h-3 rounded-full bg-accent/50" />
               <span className="text-muted-foreground">{category}</span>
