@@ -32,9 +32,9 @@ const values = [
 ];
 
 const stats = [
-  { value: "15+", label: "Years in Business" },
-  { value: "200+", label: "Projects Delivered" },
-  { value: "50+", label: "Team Members" },
+  { value: "1+", label: "Years in Business" },
+  { value: "20+", label: "Projects Delivered" },
+  { value: "4+", label: "Team Members" },
   { value: "98%", label: "Client Retention" },
 ];
 
@@ -44,7 +44,7 @@ const About = () => {
       <PageBanner
         badge="Who We Are"
         title="About"
-        titleHighlight="NexaTech"
+        titleHighlight="DEVILON"
         description="We're a team of passionate engineers, designers, and strategists building the future of software."
       />
 
@@ -60,23 +60,25 @@ const About = () => {
                 Building Software That <span className="gradient-text">Matters</span>
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  Founded in 2010, NexaTech started with a simple mission: to bridge the gap 
-                  between innovative ideas and exceptional software. What began as a small team 
-                  of passionate developers has grown into a full-service software agency trusted 
-                  by startups and Fortune 500 companies alike.
-                </p>
-                <p>
-                  Over the years, we've refined our approach, embracing agile methodologies, 
-                  investing in our team's growth, and constantly pushing the boundaries of what's 
-                  possible with technology. Today, we're proud to be a partner of choice for 
-                  businesses seeking to transform their industries through software.
-                </p>
-                <p>
-                  Our success is built on a foundation of technical excellence, transparent 
-                  communication, and genuine care for our clients' outcomes. We don't just 
-                  write code—we solve business problems and create lasting value.
-                </p>
+                         <p>
+                          Founded in 2025, DEVILON was created with a clear purpose: to help ideas move from concept to
+                          working, meaningful software. We started as a small, multidisciplinary team driven by curiosity,
+                          problem-solving, and a hands-on approach to building technology that actually gets used.
+                        </p>
+
+                        <p>
+                          Our strength lies in versatility. From web and backend systems to automation, data workflows,
+                          mobile applications, and product visualization, we focus on practical solutions that help startups
+                          and small to medium businesses move faster, operate smarter, and validate their ideas with real
+                          users.
+                        </p>
+
+                        <p>
+                          We believe good software is not just about clean code—it’s about understanding the problem,
+                          iterating quickly, and delivering measurable value. By combining engineering, automation, and
+                          creative capabilities, we partner closely with our clients to build MVPs, internal tools, and
+                          digital products that are efficient, scalable, and grounded in real business needs.
+                        </p>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-6">
@@ -108,22 +110,23 @@ const About = () => {
                 Empowering Businesses Through Technology
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                We exist to help ambitious organizations harness the power of software 
-                to achieve their goals. By combining deep technical expertise with 
-                business acumen, we deliver solutions that drive real, measurable impact.
-              </p>
+              We exist to help ambitious teams turn ideas into dependable software. By combining
+              strong engineering fundamentals with a clear understanding of business goals, we
+              build solutions that solve real problems and deliver measurable outcomes.
+            </p>
             </div>
             <div className="bg-card rounded-2xl p-10 border border-border">
               <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-4 block">
                 Vision
               </span>
               <h3 className="text-2xl font-bold text-foreground mb-4">
-                Shaping the Future of Digital Innovation
+                Making Technology Practical and Accessible
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                We envision a world where every business, regardless of size, can 
-                leverage cutting-edge technology to compete and thrive. We're committed 
-                to being the catalyst that makes this vision a reality.
+                We envision a future where businesses of any size can confidently use technology
+                to move faster, operate smarter, and scale sustainably. Our goal is to lower the
+                barrier between ideas and execution by delivering clear, well-built, and
+                maintainable software.
               </p>
             </div>
           </div>
@@ -183,7 +186,7 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-primary-foreground/70 leading-relaxed">
                 <p>
-                  At NexaTech, we believe that great software comes from great teams. 
+                  At DEVILON, we believe that great software comes from great teams. 
                   We've built a culture that attracts top talent and empowers them to 
                   do their best work—with flexibility, autonomy, and purpose.
                 </p>
@@ -236,38 +239,38 @@ const About = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Proven Track Record",
-                description:
-                  "200+ successful projects across industries from startups to Fortune 500 companies.",
-              },
-              {
-                title: "Technical Excellence",
-                description:
-                  "Senior engineers with 10+ years average experience in cutting-edge technologies.",
-              },
-              {
-                title: "Partnership Approach",
-                description:
-                  "We're invested in your success, acting as an extension of your team.",
-              },
-              {
-                title: "Transparent Process",
-                description:
-                  "Clear communication, regular updates, and no surprises throughout the project.",
-              },
-              {
-                title: "Long-term Support",
-                description:
-                  "We're there for you post-launch with maintenance, optimization, and evolution.",
-              },
-              {
-                title: "Competitive Pricing",
-                description:
-                  "Premium quality at fair prices with flexible engagement models.",
-              },
-            ].map((reason) => (
+             {[
+    {
+      title: "Problem-Focused Engineering",
+      description:
+        "We don't build software for the sake of it. Every decision is driven by real business needs and long-term usability.",
+    },
+    {
+      title: "Strong Technical Foundations",
+      description:
+        "Our team focuses on clean architecture, maintainable code, and modern, proven technologies.",
+    },
+    {
+      title: "Collaborative Approach",
+      description:
+        "We work closely with clients, acting as a technical partner rather than a detached vendor.",
+    },
+    {
+      title: "Clear & Honest Communication",
+      description:
+        "You'll always know what's happening—clear timelines, regular updates, and realistic expectations.",
+    },
+    {
+      title: "Scalable Solutions",
+      description:
+        "We design systems that can grow with your business, whether you're launching an MVP or scaling an existing product.",
+    },
+    {
+      title: "Fair & Transparent Pricing",
+      description:
+        "Straightforward pricing with no hidden costs, tailored to the scope and goals of your project.",
+    },]
+    .map((reason) => (
               <div
                 key={reason.title}
                 className="p-6 bg-card rounded-xl border border-border"

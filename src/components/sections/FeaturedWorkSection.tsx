@@ -35,10 +35,13 @@ const FeaturedWorkSection = () => {
               className="group bg-card rounded-2xl overflow-hidden border border-border card-hover"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div
-                className={`h-48 ${project.image} flex items-center justify-center relative overflow-hidden`}
-              >
-                <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors" />
+              <div className="h-48 relative flex items-center justify-center overflow-hidden">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="absolute inset-0 w-full h-full object-cover transition-opacity group-hover:opacity-90"
+          />
+  <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors" />
                 <div className="w-16 h-16 rounded-xl bg-card/80 backdrop-blur flex items-center justify-center">
                   <span className="font-bold text-2xl text-accent">
                     {project.title.charAt(0)}

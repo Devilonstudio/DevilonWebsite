@@ -213,6 +213,41 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+            {/* FAQ Preview */}
+      <section className="py-20 lg:py-28 bg-secondary/30">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl font-bold text-foreground mb-8">
+              Frequently Asked Questions
+            </h2>
+            <div className="grid gap-6 text-left">
+              {[
+                {
+                  q: "What's your typical project timeline?",
+                  a: "Most projects range from weeks-months depending on scope. We'll provide detailed estimates after our discovery phase.",
+                },
+                {
+                  q: "Do you work with startups?",
+                  a: "Absolutely! We work with companies of all sizes, from early-stage startups to SMEs.",
+                },
+                {
+                  q: "What's your engagement model?",
+                  a: "We offer both fixed-price projects and dedicated team arrangements, depending on your needs.",
+                },
+              ].map((faq) => (
+                <div
+                  key={faq.q}
+                  className="p-6 bg-card rounded-xl border border-border"
+                >
+                  <h3 className="font-semibold text-foreground mb-2">{faq.q}</h3>
+                  <p className="text-muted-foreground text-sm">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
     </PageLayout>
   );
 };
