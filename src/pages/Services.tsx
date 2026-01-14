@@ -23,25 +23,32 @@ const Services = () => {
               const Icon = service.icon;
               return (
                 <Link
-                  key={service.id}
-                  to={`/services/${service.id}`}
-                  className="group bg-card rounded-2xl p-8 border border-border card-hover"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent transition-colors duration-300">
-                    <Icon className="w-7 h-7 text-accent group-hover:text-accent-foreground transition-colors" />
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
+                key={service.id}
+                to={`/services/${service.id}`}
+                className="group relative overflow-hidden rounded-2xl border border-border bg-card h-[420px] flex flex-col justify-end transition-all duration-300 hover:shadow-2xl hover:shadow-accent/10"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="absolute inset-0 w-full h-full">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 via-40% to-background to-85%" />
+                </div>
+                <div className="relative p-8 z-10 transform transition-transform duration-300 group-hover:-translate-y-2">
+                  <h3 className="text-2xl font-bold text-foreground mb-3 transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    {service.shortDescription}
-                  </p>
-                  <span className="inline-flex items-center text-accent font-medium group-hover:gap-2 transition-all">
+                  <p className="text-black/60 font-medium leading-relaxed mb-6 line-clamp-2">
+                  {service.shortDescription}
+                </p>
+                  <span className="inline-flex items-center text-accent text-sm font-bold uppercase tracking-widest">
                     Learn More
-                    <ArrowRight className="ml-1 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-2" />
                   </span>
-                </Link>
+                </div>
+              </Link>
               );
             })}
           </div>

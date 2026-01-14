@@ -1,11 +1,18 @@
-import { Code, BarChart, Smartphone, Palette, Settings, Layers, LucideIcon } from "lucide-react";
+import { Code, Globe, Smartphone, Palette, Database, Brain, Layers, LucideIcon } from "lucide-react";
 
+import mobDevImg from "../assets/services_images/mob_dev.webp";
+import webDevImg from "../assets/services_images/webDev.jpg";
+import DengImg from "../assets/services_images/dengImg.webp";
+import d3Img from "../assets/services_images/d3Img.jpg";
+import AIImg from "../assets/services_images/aiimg.png";
+import mvpImg from "../assets/services_images/mvpImg.jpg";
 export interface Service {
   id: string;
   icon: LucideIcon;
   title: string;
   shortDescription: string;
   description: string;
+  image: string; // Added image property
   useCases: string[];
   benefits: string[];
   technologies: string[];
@@ -13,151 +20,142 @@ export interface Service {
 
 export const services: Service[] = [
   {
-     id: "custom-software-development",
-    icon: Code,
-    title: "Custom Software Development",
-    shortDescription:
-      "Practical, custom-built software solutions tailored to your business workflows and operational needs.",
+    id: "data-engineering-automation",
+    icon: Database,
+    title: "Data Engineering & Automation",
+    shortDescription: "Eliminating manual work through robust ETL pipelines and orchestration.",
+    image: DengImg, 
     description:
-      "We design and develop custom software solutions focused on solving real business problems. From internal tools to lightweight SaaS platforms, we work closely with clients to deliver reliable, maintainable software that improves efficiency and supports growth.",
+      "As seen in our Case Studies, we build the 'central nervous system' for your business data. We automate the movement, transformation, and reconciliation of data across disparate systems to provide 100% operational accuracy.",
     useCases: [
-      "Internal business tools and admin panels",
-      "Workflow and process automation systems",
-      "Custom dashboards and reporting tools",
-      "Lightweight SaaS and MVP platforms",
-      "System utilities and performance-focused applications",
+      "Automated Inventory & Pricing Reconciliation",
+      "Multi-source ETL (SQL, Sheets, Shopify, APIs)",
+      "HRIS and Automated Payroll Sync",
+      "Real-time System Observability Dashboards",
+      "Automated Slack/Email Reporting Workflows"
     ],
     benefits: [
-      "Software aligned with your exact requirements",
-      "Improved operational efficiency through automation",
-      "Flexible and extendable architecture",
-      "Cost-effective alternative to off-the-shelf tools",
-      "Clear, maintainable codebase",
+      "90% reduction in manual data tasks",
+      "Elimination of human error in reporting",
+      "Proactive error detection and logging",
+      "Massive gains in operational efficiency"
     ],
-    technologies: ["JavaScript", "Python", "C++", "MERN Stack", "MySQL", "Docker"],
+    technologies: ["Python", "JavaScript", "Retool", "Cron", "n8n", "SQL", "REST APIs"],
   },
   {
-    id: "mvp-startup-development",
-    icon: Layers,
-    title: "MVP & Startup Product Development",
-    shortDescription:
-      "Rapid MVP development to validate ideas, attract users, and prepare for growth.",
-    description:
-      "We help startups turn ideas into functional MVPs quickly and efficiently. Our approach focuses on core features, rapid iteration, and real user feedback—allowing founders to validate concepts without overbuilding or overspending.",
-    useCases: [
-      "Startup MVPs and proof-of-concept products",
-      "Early-stage SaaS platforms",
-      "Founder-led product validation",
-      "Internal prototypes for funding demos",
-      "Feature experiments and iterations",
-    ],
-    benefits: [
-      "Faster time-to-market",
-      "Lower development risk and cost",
-      "Clear technical roadmap for future scaling",
-      "Focus on business-critical features",
-      "Iterative improvements based on feedback",
-    ],
-    technologies: ["React", "Node.js", "MongoDB", "Express", "Docker", "AWS"],
-  },
-  {
-    id: "web-mobile-development",
+    id: "mobile-development",
     icon: Smartphone,
-    title: "Web & Mobile App Development",
-    shortDescription:
-      "Responsive web apps and cross-platform mobile solutions built for real-world business use.",
+    title: "Mobile App Development",
+    shortDescription: "Premium iOS and Android applications with a focus on native performance.",
+    image: mobDevImg,
     description:
-      "We develop reliable web and mobile applications that prioritize usability, performance, and maintainability. From internal productivity apps to customer-facing platforms, our solutions are designed to work seamlessly across devices.",
+      "We create mobile experiences that users love. Whether it's a cross-platform solution for rapid deployment or a high-performance native app, we ensure your mobile presence is fluid, secure, and feature-rich.",
     useCases: [
-      "Business dashboards and portals",
-      "Cross-platform mobile apps for SMEs",
-      "Customer-facing web applications",
-      "Internal productivity and utility apps",
-      "Early-stage consumer applications",
+      "Cross-platform Apps (iOS & Android)",
+      "Consumer-facing Mobile Products",
+      "On-the-go Business Utility Apps",
+      "Offline-first Mobile Solutions",
+      "IoT and Hardware-integrated Apps"
     ],
     benefits: [
-      "Consistent experience across devices",
-      "Faster delivery with cross-platform frameworks",
-      "Clean, maintainable codebase",
-      "User-focused design and performance",
-      "Scalable foundation for future features",
+      "Single codebase for faster time-to-market",
+      "Native-level gestures and animations",
+      "Optimized battery and resource usage",
+      "App Store and Play Store launch support"
     ],
-    technologies: ["React", "Flutter", "Native iOS", "JavaScript", "Firebase"],
+    technologies: ["Flutter", "React Native", "Firebase", "Dart", "Swift", "Kotlin"],
   },
   {
-    id: "automation-internal-tools",
-    icon: Settings,
-    title: "Automation & Internal Tools",
-    shortDescription:
-      "Automation-driven solutions to reduce manual work and improve operational efficiency.",
-    description:
-      "We build automation workflows and internal tools that help businesses streamline operations. Using low-code and custom scripting, we connect systems, automate repetitive tasks, and create dashboards that give teams better visibility and control.",
-    useCases: [
-      "Business process automation",
-      "Workflow orchestration",
-      "Data sync and integration systems",
-      "Operational efficiency tools for SMEs",
-    ],
-    benefits: [
-      "Reduced manual effort and errors",
-      "Faster internal workflows",
-      "Improved data visibility",
-      "Lower operational costs",
-      "Quick deployment and iteration",
-    ],
-    technologies: ["Python", "n8n", "Retool", "Google Sheets", "APIs", "ETL ELT pipelines", "Microsoft Excel"],
-  },
-  {
-    id: "data-reporting-analytics",
-    icon: BarChart,
-    title: "Data Reporting & Analytics",
-    shortDescription:
-      "Clear, actionable insights through dashboards and lightweight analytics solutions.",
-    description:
-      "We help businesses make sense of their data by designing reporting systems and analytics dashboards. Our focus is on clarity, automation, and decision-ready insights rather than complex enterprise analytics.",
-    useCases: [
-      "Business performance dashboards",
-      "Reporting and analytics",
-      "Automated reporting workflows",
-      "ETL and ELT data workflows",
-      "Sales and operations reporting",
-      "Data consolidation from multiple sources",
-      "Data reconciliation ",
-    ],
-    benefits: [
-      "Improved decision-making",
-      "Automated and reliable reporting",
-      "Better visibility into operations",
-      "Reduced manual data handling",
-      "Clear and understandable dashboards",
-    ],
-    technologies: ["Power BI", "Python", "SQL", "APIs", "Google Sheets", "Emails"],
-  },
-  {
-    id: "product-visualization-media",
+    id: "3d-modeling-visualization",
     icon: Palette,
-    title: "Product Visualization & Digital Media",
-    shortDescription:
-      "High-quality 3D visuals and explainer media to showcase products and ideas effectively.",
+    title: "3D Modeling & Visualization",
+    shortDescription: "Photorealistic 3D assets and cinematic animations for products.",
+    image: d3Img,
     description:
-      "We create 3D models, animations, and visual media that help businesses present products clearly and professionally. These visuals are ideal for marketing, product demos, e-commerce listings, and early-stage concept validation.",
+      "We bring physical concepts into the digital world with high-fidelity 3D modeling. Our visuals are perfect for startups needing prototypes, e-commerce brands wanting perfect renders, or tech firms explaining complex hardware.",
     useCases: [
-      "Product visualization for startups",
-      "Explainer animations and demo videos",
-      "E-commerce product visuals",
-      "Concept demonstrations and prototypes",
-      "Advertising and product animation",
-      "Hard surface modeling and procedural textures",
+      "Photorealistic Product Rendering",
+      "Explainer & Technical Animations",
+      "3D Configurators for Web",
+      "Hard-surface Industrial Modeling",
+      "Digital Twin Visualizations"
     ],
     benefits: [
-      "Clear communication of complex ideas",
-      "Improved product presentation",
-      "Stronger marketing impact",
-      "Professional visual consistency",
-      "Cost-effective alternative to physical prototypes",
+      "Reduce cost of physical photography",
+      "Visualize products before manufacturing",
+      "High-impact marketing and pitch decks",
+      "Infinite flexibility in lighting and staging"
     ],
-    technologies: ["Blender", "DaVinci Resolve", "Adobe Suite", "3D Modeling", "Animation"],
+    technologies: ["Blender", "Three.js", "DaVinci Resolve", "Adobe Creative Suite"],
   },
+  {
+    id: "gen-ai-ml",
+    icon: Brain,
+    title: "GenAI & Machine Learning",
+    shortDescription: "Custom AI agents, LLM integration, and predictive data modeling.",
+    image: AIImg,
+    description:
+      "We help you move beyond the hype and implement functional AI. From building custom RAG (Retrieval-Augmented Generation) systems that talk to your company data to training models for predictive maintenance, we build AI that works.",
+    useCases: [
+      "Custom AI Chatbots & Customer Agents",
+      "RAG Systems for Internal Knowledge Bases",
+      "Predictive Analytics for Sales & Logistics",
+      "Automated Content Generation Pipelines",
+      "Computer Vision for Asset Recognition"
+    ],
+    benefits: [
+      "Personalized customer experiences at scale",
+      "Data-driven forecasting and decision making",
+      "Automation of complex cognitive tasks",
+      "Unlock insights from unstructured data"
+    ],
+    technologies: ["PyTorch", "OpenAI / Anthropic APIs", "LangChain", "Vector Databases", "Scikit-learn"],
+  },
+  {
+    id: "web-development",
+    icon: Globe,
+    title: "Web Development",
+    shortDescription: "Scalable, high-performance web applications and enterprise-grade platforms.",
+    image: webDevImg,
+    description:
+      "We build more than just websites. We develop complex web applications focused on performance, SEO, and seamless user experiences. From custom dashboards to full-scale SaaS platforms, our web solutions are built to grow with your business.",
+    useCases: [
+      "Custom SaaS Platform Development",
+      "Dynamic E-commerce Ecosystems",
+      "Corporate Portals and Admin Dashboards",
+      "Progressive Web Apps (PWAs)",
+      "Interactive Real-time Web Tools"
+    ],
+    benefits: [
+      "Highly responsive and SEO-optimized",
+      "Secure and scalable cloud architecture",
+      "Lightning-fast load times and performance",
+      "Seamless third-party API integrations"
+    ],
+    technologies: ["React", "Next.js", "TypeScript", "Node.js", "Tailwind CSS", "PostgreSQL"],
+  },
+  {
+    id: "mvp-startup-accelerator",
+    icon: Layers,
+    title: "MVP & Startup Development",
+    shortDescription: "Turning vision into reality with rapid, investor-ready product launches.",
+    image: mvpImg,
+    description:
+      "We specialize in helping founders launch quickly. We focus on the core value proposition of your product, building a scalable foundation that allows for rapid iteration based on real user feedback.",
+    useCases: [
+      "Rapid Prototype Development (4-8 weeks)",
+      "Investor-ready MVPs",
+      "Proof-of-Concept for new features",
+      "Scalable Tech Stack Consulting"
+    ],
+    benefits: [
+      "Fastest path to market validation",
+      "Reduced initial development overhead",
+      "Scalable architecture from Day 1",
+      "Strategic technical partnership"
+    ],
+    technologies: ["MERN/T3 Stack", "AWS", "Docker", "Vercel", "Tailwind CSS"],
+  }
 ];
 
 export const getServiceById = (id: string): Service | undefined => {
