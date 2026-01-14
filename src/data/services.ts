@@ -28,19 +28,30 @@ export const services: Service[] = [
     description:
       "As seen in our Case Studies, we build the 'central nervous system' for your business data. We automate the movement, transformation, and reconciliation of data across disparate systems to provide 100% operational accuracy.",
     useCases: [
-      "Automated Inventory & Pricing Reconciliation",
-      "Multi-source ETL (SQL, Sheets, Shopify, APIs)",
-      "HRIS and Automated Payroll Sync",
-      "Real-time System Observability Dashboards",
-      "Automated Slack/Email Reporting Workflows"
+      "Business process automation",
+      "Workflow orchestration",
+      "Data sync and integration systems",
+      "Operational efficiency tools for SMEs",
+      "Business performance dashboards",
+      "Reporting and analytics",
+      "Automated reporting workflows",
+      "ETL and ELT data workflows",
+      "Sales and operations reporting",
+      "Data consolidation from multiple sources",
+      "Data reconciliation ",
+
     ],
     benefits: [
       "90% reduction in manual data tasks",
       "Elimination of human error in reporting",
       "Proactive error detection and logging",
-      "Massive gains in operational efficiency"
+      "Massive gains in operational efficiency",
+      "Clear and understandable dashboards",
+       "Improved data visibility",
+      "Lower operational costs",
+      "Quick deployment and iteration"
     ],
-    technologies: ["Python", "JavaScript", "Retool", "Cron", "n8n", "SQL", "REST APIs"],
+    technologies: ["Python", "JavaScript", "Retool", "Google Sheets", "n8n", "SQL", "REST APIs","Microsoft Excel","Power BI","Emails"],
   },
   {
     id: "mobile-development",
