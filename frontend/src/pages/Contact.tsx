@@ -26,8 +26,8 @@ const Contact = () => {
 
   // Detect environment: use full URL for local dev
   const API_URL = import.meta.env.DEV
-    ? "http://localhost:3000/api/contact.js"
-    : "/api/contact.js";
+    ? "http://localhost:3000/api/contact"
+    : "/api/contact";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -170,29 +170,12 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                    <a href="mailto:devilonstudios@gmail.com" className="text-muted-foreground hover:text-accent transition-colors">
-                      devilonstudios@gmail.com
+                    <a href="mailto:contact@devilonstudio.com" className="text-muted-foreground hover:text-accent transition-colors">
+                      contact@devilonstudio.com
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-6 bg-card rounded-xl border border-border">
-                  <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                    <a href="tel:+923202568948" className="text-muted-foreground hover:text-accent transition-colors">
-                      +92 (320) 256-8948
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4 p-6 bg-card rounded-xl border border-border">
-                  <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-accent" />
-                  </div>
-                </div>
               </div>
 
               {/* Social Links */}

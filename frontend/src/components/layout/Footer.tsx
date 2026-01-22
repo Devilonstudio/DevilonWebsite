@@ -106,11 +106,6 @@ const Footer = () => {
                   devilonstudios@gmail.com
                 </a>
               </li>
-              <li>
-                <a href="tel:+923202568948" className="hover:text-accent transition-colors">
-                  +92 (320) 256-8948
-                </a>
-              </li>
             </ul>
           </div>
         </div>

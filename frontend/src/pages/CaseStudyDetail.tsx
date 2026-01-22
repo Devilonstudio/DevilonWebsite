@@ -30,18 +30,29 @@ const CaseStudyDetail = () => {
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Main content */}
             <div className="lg:col-span-2 space-y-12">
-              {/* Project Screenshot Placeholder */}
-              <div
-                className={`h-80 rounded-2xl ${caseStudy.image} flex items-center justify-center relative overflow-hidden`}
-              >
-                <div className="absolute inset-0 bg-primary/5" />
-                <div className="w-24 h-24 rounded-2xl bg-card/80 backdrop-blur flex items-center justify-center">
-                  <span className="font-bold text-4xl text-accent">
-                    {caseStudy.title.charAt(0)}
-                  </span>
-                </div>
-              </div>
+              
+            {/* Project Image with Overlay */}
+            <div className="relative h-80 rounded-2xl overflow-hidden">
+              {/* Background Image */}
+              <img
+                src={caseStudy.image}
+                alt={caseStudy.title}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
 
+              {/* Dark Overlay */}
+              <div className="absolute inset-0 bg-black/50" />
+
+              {/* Content Overlay */}
+              <div className="relative z-10 h-full flex flex-col justify-end p-6">
+                <h3 className="text-2xl font-bold text-white">
+                  {caseStudy.title}
+                </h3>
+                <p className="mt-2 text-sm text-white/80 line-clamp-2">
+                  {caseStudy.shortDescription}
+                </p>
+              </div>
+            </div>
               {/* Challenge */}
               <div>
                 <h2 className="text-2xl font-bold text-foreground mb-4">
