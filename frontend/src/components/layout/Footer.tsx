@@ -102,8 +102,8 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-3 text-sm text-primary-foreground/70">
               <li>
-                <a href="mailto:devilonstudios@gmail.com" className="hover:text-accent transition-colors">
-                  devilonstudios@gmail.com
+                <a href="mailto:contact@devilonstudios.com" className="hover:text-accent transition-colors">
+                  contact@devilonstudios.com
                 </a>
               </li>
             </ul>
