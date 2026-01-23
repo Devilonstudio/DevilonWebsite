@@ -1,6 +1,6 @@
-import gamedev from "../assets/CaseStudy/gamedev.jpg";
-import Automation from "../assets/Casestudy/Automation.jpg";
-import voiceAI from "../assets/Casestudy/voiceAI.jpg";
+import gamedev from "@/assets/CaseStudy/gamedev.jpg";
+import Automation from "@/assets/Casestudy/Automation.jpg";
+import voiceAI from "@/assets/Casestudy/voiceAI.jpg";
 
 export interface CaseStudy {
   id: string;
