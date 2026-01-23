@@ -1,4 +1,4 @@
-import gamedev from "@/assets/CaseStudy/gamedev.jpg";
+import gamedev from "@/assets/Casestudy/gamedev.jpg";
 import Automation from "@/assets/Casestudy/Automation.jpg";
 import voiceAI from "@/assets/Casestudy/voiceAI.jpg";
 
