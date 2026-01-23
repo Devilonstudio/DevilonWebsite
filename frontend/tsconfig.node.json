@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "outDir": "dist/api",
+    "rootDir": "api",
+    "esModuleInterop": true,
+    "strict": true,
+    "allowJs": true,
+    "checkJs": false
+  },
+  "include": ["api/**/*.ts", "api/**/*.js"]
+}
