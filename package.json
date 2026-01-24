@@ -1,0 +1,14 @@
+{
+  "name": "devilon-website-root",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "mongoose": "^9.1.3"
+  }
+}
