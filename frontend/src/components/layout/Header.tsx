@@ -99,14 +99,14 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden absolute top-20 left-0 right-0 bg-card/98 backdrop-blur-md border-b border-border animate-fade-in">
+          <div className="lg:hidden absolute top-20 left-0 right-0 bg-black/80 backdrop-blur-md border-b border-border animate-fade-in">
             <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   to={link.href}
                   className={`text-lg font-medium py-2 transition-colors ${
-                    isActive(link.href) ? "text-accent" : "text-foreground hover:text-accent"
+                    isActive(link.href) ? "text-accent" : "text-primary-foreground hover:text-accent"
                   }`}
                 >
                   {link.label}
