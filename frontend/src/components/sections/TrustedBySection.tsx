@@ -1,7 +1,5 @@
 const TrustedBySection = () => {
   const companies = [
-    "Sugarwish",
-    "Shahzadsky",
     "Noctem",
   ];
 
