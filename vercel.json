@@ -14,7 +14,7 @@
     { "src": "/api/(.*)", "dest": "/api/$1.js" },
     { "src": "/assets/(.*)", "dest": "/frontend/assets/$1" },
     { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/frontend/$1" },
-    { "src": "/(.*)", "status": 200, "dest": "/frontend/index.html" }
+    { "src": "/(.*)", "dest": "/frontend/$1", "continue": true },
+    { "src": "/(.*)", "dest": "/frontend/index.html" }
   ]
 }
