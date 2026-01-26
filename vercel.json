@@ -13,8 +13,8 @@
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/$1.js" },
     { "src": "/assets/(.*)", "dest": "/frontend/assets/$1" },
-    { "handle": "filesystem" },
     { "src": "/og-image.png", "dest": "/frontend/og-image.png" },
+    { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/frontend/$1", "continue": true },
     { "src": "/(.*)", "dest": "/frontend/index.html" }
   ]
