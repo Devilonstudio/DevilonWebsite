@@ -7,13 +7,12 @@ interface PageBannerProps {
 
 const PageBanner = ({ badge, title, titleHighlight, description }: PageBannerProps) => {
   return (
-    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-24 hero-gradient overflow-hidden">
-      {/* Grid pattern overlay */}
-      <div className="absolute inset-0 grid-pattern opacity-50" />
-      
-      {/* Floating shapes */}
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-accent/5 rounded-full blur-2xl animate-float delay-300" />
+    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-24 bg-black overflow-hidden">
+  <div className="absolute inset-0 grid-pattern opacity-20" />
+
+  <div className="absolute bottom-[-100px] left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-blue-600/10 rounded-full blur-[160px]" />
+
+  <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-blue-500/5 to-transparent" />
 
       <div className="relative container mx-auto px-4 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">

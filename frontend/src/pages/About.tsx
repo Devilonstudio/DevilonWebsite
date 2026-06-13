@@ -7,45 +7,57 @@ import PageBanner from "@/components/shared/PageBanner";
 const values = [
   {
     icon: Target,
-    title: "Excellence",
+    title: "Delivery Excellence",
     description:
-      "We hold ourselves to the highest standards in everything we build, never settling for 'good enough'.",
+      "We focus on predictable execution, clean engineering, and quality outcomes.",
   },
   {
     icon: Users,
-    title: "Collaboration",
+    title: "Ownership",
     description:
-      "We work as true partners with our clients, fostering open communication and shared ownership.",
+      "We treat every project as a shared responsibility.",
   },
   {
     icon: Heart,
-    title: "Integrity",
+    title: "Transparency",
     description:
-      "We do what's right, even when no one is watching. Honesty and transparency guide every decision.",
+      "Clear communication, realistic timelines, and honest expectations.",
   },
   {
     icon: Award,
-    title: "Innovation",
+    title: "Continuous Improvement",
     description:
-      "We embrace new technologies and creative solutions to solve complex problems effectively.",
+      "We constantly improve our skills, processes, and solutions.",
   },
 ];
 
 const stats = [
-  { value: "1+", label: "Years in Business" },
-  { value: "20+", label: "Projects Delivered" },
-  { value: "4+", label: "Team Members" },
-  { value: "98%", label: "Client Retention" },
-];
+ {
+  value:"2025",
+  label:"Founded"
+ },
+ {
+  value:"5+",
+  label:"Specialized Team Members"
+ },
+ {
+  value:"5",
+  label:"Engineering Capabilities"
+ },
+ {
+  value:"Global",
+  label:"Client Collaboration"
+ }
+]
 
 const About = () => {
   return (
     <PageLayout>
       <PageBanner
-        badge="Who We Are"
+        badge="Engineering Partner"
         title="About"
         titleHighlight="DEVILON"
-        description="We're a team of passionate engineers, designers, and strategists building the future of software."
+        description="A white-label product engineering partner helping agencies, studios, and growing businesses deliver high-quality software without expanding internal teams."
       />
 
       {/* Company Overview */}
@@ -57,27 +69,22 @@ const About = () => {
                 Our Story
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Building Software That <span className="gradient-text">Matters</span>
+                Building Software That  <span className="gradient-text">Moves Businesses Forward</span>
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                          <p>
-                          Founded in 2025, DEVILON was created with a clear purpose: to help ideas move from concept to
-                          working, meaningful software. We started as a small, multidisciplinary team driven by curiosity,
-                          problem-solving, and a hands-on approach to building technology that actually gets used.
+                          Founded in 2025, Devilon Studio was created to help agencies, product teams, and growing businesses access reliable engineering expertise without the overhead of building large in-house teams.
                         </p>
 
                         <p>
-                          Our strength lies in versatility. From web and backend systems to automation, data workflows,
-                          mobile applications, and product visualization, we focus on practical solutions that help startups
-                          and small to medium businesses move faster, operate smarter, and validate their ideas with real
-                          users.
+                          We specialize in product engineering, mobile applications, business automation systems, AI-powered solutions, and interactive digital experiences. Our focus is not just writing code, but helping clients deliver products that solve real business problems.
                         </p>
 
                         <p>
-                          We believe good software is not just about clean code—it’s about understanding the problem,
-                          iterating quickly, and delivering measurable value. By combining engineering, automation, and
-                          creative capabilities, we partner closely with our clients to build MVPs, internal tools, and
-                          digital products that are efficient, scalable, and grounded in real business needs.
+                          For agencies and creative studios, we operate as a white-label engineering partner—integrating into existing workflows, collaborating behind the scenes, and helping teams increase delivery capacity without increasing headcount.
+                        </p>
+                        <p>
+                         Whether launching a new product, modernizing existing systems, or supporting ongoing client work, we prioritize clear communication, dependable execution, and long-term maintainability.
                         </p>
               </div>
             </div>
@@ -107,12 +114,10 @@ const About = () => {
                 Mission
               </span>
               <h3 className="text-2xl font-bold text-foreground mb-4">
-                Empowering Businesses Through Technology
+               Helping Agencies and Businesses Deliver Better Software
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-              We exist to help ambitious teams turn ideas into dependable software. By combining
-              strong engineering fundamentals with a clear understanding of business goals, we
-              build solutions that solve real problems and deliver measurable outcomes.
+              We help agencies, studios, and businesses deliver reliable digital products through strong engineering practices, transparent collaboration, and predictable execution.
             </p>
             </div>
             <div className="bg-card rounded-2xl p-10 border border-border">
@@ -120,13 +125,10 @@ const About = () => {
                 Vision
               </span>
               <h3 className="text-2xl font-bold text-foreground mb-4">
-                Making Technology Practical and Accessible
+               Becoming the Trusted White-Label Engineering Partner
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                We envision a future where businesses of any size can confidently use technology
-                to move faster, operate smarter, and scale sustainably. Our goal is to lower the
-                barrier between ideas and execution by delivering clear, well-built, and
-                maintainable software.
+                Our goal is to become the engineering partner agencies and businesses rely on when they need additional technical capability, dependable delivery, and long-term product support.
               </p>
             </div>
           </div>
@@ -144,8 +146,7 @@ const About = () => {
               What We <span className="gradient-text">Stand For</span>
             </h2>
             <p className="text-muted-foreground text-lg">
-              Our values aren't just words on a wall—they're the principles that guide 
-              every decision we make and every line of code we write.
+              These principles guide how we collaborate with clients, deliver projects, and build long-term partnerships.
             </p>
           </div>
 
@@ -179,39 +180,30 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-4 block">
-                Our Culture
+                How We Work
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-                A Team That <span className="gradient-text">Thrives Together</span>
+                An Engineering Team Built for  <span className="gradient-text">Collaboration</span>
               </h2>
               <div className="space-y-4 text-primary-foreground/70 leading-relaxed">
                 <p>
-                  At DEVILON, we believe that great software comes from great teams. 
-                  We've built a culture that attracts top talent and empowers them to 
-                  do their best work—with flexibility, autonomy, and purpose.
+                  We work as an extension of your team, adapting to existing workflows, communication channels, and delivery processes.
                 </p>
                 <p>
-                  Our team members are more than employees—they're problem solvers, 
-                  innovators, and craftspeople who take pride in their work. We invest 
-                  heavily in learning and development, encouraging everyone to grow 
-                  their skills and explore new technologies.
-                </p>
-                <p>
-                  Remote-first by design, we offer the flexibility that modern 
-                  professionals need while maintaining strong connections through 
-                  regular virtual and in-person gatherings.
+                  For agency partnerships, we operate behind the scenes under your brand. For businesses, we provide direct engineering support focused on building and maintaining reliable software products.
+                  Our goal is simple: make collaboration easy and delivery predictable.
                 </p>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              {[
-                "Remote-first workplace",
-                "Continuous learning budget",
-                "Regular team retreats",
-                "Open door policy",
-                "Work-life balance",
-                "Diverse perspectives",
-              ].map((benefit) => (
+          {[
+          "Structured Communication",
+          "Clear Requirements",
+          "Modern Development Practices",
+          "Documentation First",
+          "Collaborative Delivery",
+          "Long-Term Support"
+          ].map((benefit) => (
                 <div
                   key={benefit}
                   className="bg-surface-dark-elevated rounded-xl p-6 border border-primary-foreground/10"
@@ -253,7 +245,7 @@ const About = () => {
     {
       title: "Collaborative Approach",
       description:
-        "We work closely with clients, acting as a technical partner rather than a detached vendor.",
+        "We integrate closely with client teams, acting as an engineering partner rather than an outsourced vendor.",
     },
     {
       title: "Clear & Honest Communication",
@@ -266,9 +258,9 @@ const About = () => {
         "We design systems that can grow with your business, whether you're launching an MVP or scaling an existing product.",
     },
     {
-      title: "Fair & Transparent Pricing",
+      title: "Flexible Engagement Models",
       description:
-        "Straightforward pricing with no hidden costs, tailored to the scope and goals of your project.",
+        "Support for fixed projects, ongoing development, and extended engineering teams.",
     },]
     .map((reason) => (
               <div
@@ -288,14 +280,14 @@ const About = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-              Ready to Work <span className="gradient-text">Together?</span>
+              Need Additional   <span className="gradient-text">Engineering Capacity?</span>
             </h2>
             <p className="text-primary-foreground/70 text-lg mb-8">
-              Let's discuss how our team can help bring your vision to life.
+              Whether you need a white-label development partner, ongoing engineering support, or a team to build your next product, we're ready to help.
             </p>
             <Button variant="hero" size="xl" asChild>
               <Link to="/contact">
-                Get in Touch
+                Partner With Us
                 <ArrowRight className="ml-2" size={20} />
               </Link>
             </Button>
