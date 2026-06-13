@@ -3,9 +3,9 @@ import { Users, Zap, Target, Handshake, MessageCircle } from "lucide-react";
 const reasons = [
   {
     icon: Users,
-    title: "Experienced Engineering Teams",
+    title: "Cross-Functional Engineering Team",
     description:
-      "Our senior developers bring 10+ years of expertise across diverse industries and technologies.",
+      "Our developers bring experience across web, mobile, automation, and product development.",
   },
   {
     icon: Zap,
@@ -35,7 +35,7 @@ const reasons = [
 
 const WhyChooseUsSection = () => {
   return (
-    <section className="py-24 lg:py-32 section-dark">
+    <section className="py-24 lg:py-32 bg-surface-dark">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
@@ -56,15 +56,15 @@ const WhyChooseUsSection = () => {
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-surface-dark-elevated rounded-xl p-6 border border-primary-foreground/10">
-                <div className="text-4xl font-bold gradient-text mb-2">95%</div>
+                <div className="text-4xl font-bold gradient-text mb-2">Flexible</div>
                 <div className="text-primary-foreground/60 text-sm">
-                  On-Time Delivery Rate
+                  Teams
                 </div>
               </div>
               <div className="bg-surface-dark-elevated rounded-xl p-6 border border-primary-foreground/10">
-                <div className="text-4xl font-bold gradient-text mb-2">4.9/5</div>
+                <div className="text-4xl font-bold gradient-text mb-2">Transparent </div>
                 <div className="text-primary-foreground/60 text-sm">
-                  Average Client Rating
+                  Delivery
                 </div>
               </div>
             </div>

@@ -69,7 +69,7 @@ const Contact = () => {
         badge="Get in Touch"
         title="Contact"
         titleHighlight="Us"
-        description="Ready to start your project? Have questions? We'd love to hear from you."
+        description="Need a development partner for your next project? Tell us what you're working on and we'll explore how we can help."
       />
 
       <section className="py-20 lg:py-28 bg-background">
@@ -78,7 +78,7 @@ const Contact = () => {
             {/* Contact Form */}
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-6">
-                Send Us a Message
+                Let's Discuss Your Project
               </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-6">
@@ -159,7 +159,7 @@ const Contact = () => {
               <div>
                 <h2 className="text-2xl font-bold text-foreground mb-6">Contact Information</h2>
                 <p className="text-muted-foreground mb-8">
-                  Prefer to reach out directly? Here's how you can get in touch with our team.
+                  Have questions before getting started? Reach out directly and we'll help determine the best way to work together.
                 </p>
               </div>
 
@@ -208,15 +208,15 @@ const Contact = () => {
               {[
                 {
                   q: "What's your typical project timeline?",
-                  a: "Most projects range from weeks-months depending on scope. We'll provide detailed estimates after our discovery phase.",
+                  a: "Timelines vary based on scope and complexity. Most projects begin with a discovery phase, after which we provide a delivery roadmap and estimate.",
                 },
                 {
-                  q: "Do you work with startups?",
-                  a: "Absolutely! We work with companies of all sizes, from early-stage startups to SMEs.",
+                  q: "Do you work with agencies?",
+                  a: "Yes. We regularly support agencies, studios, and consulting firms that need reliable development capacity for client projects.",
                 },
                 {
                   q: "What's your engagement model?",
-                  a: "We offer both fixed-price projects and dedicated team arrangements, depending on your needs.",
+                  a: "We support both direct client projects and white-label partnerships. Whether you need help delivering a single project or ongoing engineering support, we can adapt to your workflow.",
                 },
               ].map((faq) => (
                 <div

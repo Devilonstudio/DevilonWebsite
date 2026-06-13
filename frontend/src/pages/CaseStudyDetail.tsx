@@ -66,7 +66,7 @@ const CaseStudyDetail = () => {
               {/* Solution */}
               <div>
                 <h2 className="text-2xl font-bold text-foreground mb-4">
-                  Our Solution
+                  Solution Approach
                 </h2>
                 <p className="text-muted-foreground leading-relaxed text-lg">
                   {caseStudy.solution}
@@ -76,7 +76,7 @@ const CaseStudyDetail = () => {
               {/* Results */}
               <div>
                 <h2 className="text-2xl font-bold text-foreground mb-6">
-                  Results & Impact
+                  Key Outcomes
                 </h2>
                 <div className="grid sm:grid-cols-2 gap-4">
                   {caseStudy.results.map((result, index) => (
@@ -99,7 +99,7 @@ const CaseStudyDetail = () => {
                 <h3 className="font-bold text-foreground mb-6">Project Details</h3>
                 <div className="space-y-4">
                   <div>
-                    <div className="text-sm text-muted-foreground mb-1">Client</div>
+                    <div className="text-sm text-muted-foreground mb-1">Project Type</div>
                     <div className="font-medium text-foreground">{caseStudy.client}</div>
                   </div>
                   <div>
@@ -126,13 +126,13 @@ const CaseStudyDetail = () => {
 
               {/* CTA Card */}
               <div className="bg-primary rounded-2xl p-8 text-primary-foreground">
-                <h3 className="font-bold mb-3">Have a Similar Project?</h3>
+                <h3 className="font-bold mb-3">Planning a Similar Project?</h3>
                 <p className="text-primary-foreground/70 text-sm mb-6">
-                  Let's discuss how we can deliver similar results for your business.
+                  Whether you're supporting a client project or need additional development capacity, our team is ready to help.
                 </p>
                 <Button variant="hero" size="lg" className="w-full" asChild>
                   <Link to="/contact">
-                    Get in Touch
+                    Discuss Your Project
                     <ArrowRight className="ml-2" size={18} />
                   </Link>
                 </Button>
@@ -151,7 +151,7 @@ const CaseStudyDetail = () => {
               className="inline-flex items-center text-muted-foreground hover:text-accent transition-colors"
             >
               <ArrowLeft className="mr-2 w-4 h-4" />
-              All Case Studies
+              All Project Highlights
             </Link>
             <Link
               to={`/case-studies/${nextStudy.id}`}

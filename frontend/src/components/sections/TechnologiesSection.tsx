@@ -7,9 +7,9 @@ const technologies = [
 
   // Backend & Languages
   { name: "Node.js", category: "Backend" },
+  { name: "Express", category: "Backend" },
   { name: "Python", category: "Backend" },
-  { name: "JavaScript", category: "Language" },
-  { name: "C++", category: "Language" },
+  
 
   // Mobile
   { name: "Flutter", category: "Mobile" },
@@ -17,11 +17,15 @@ const technologies = [
 
   // Databases
   { name: "MongoDB", category: "Database" },
+  { name: "Supabase", category: "Database" },
+  { name: "Firebase", category: "Database" },
   { name: "MySQL", category: "Database" },
-  { name: "MS SQL Server", category: "Database" },
+  { name: "PostgreSQL", category: "Database" },
 
   // Automation & Data
   { name: "n8n", category: "Automation" },
+   { name: "OpenAI APIs", category: "AI" },
+    { name: "ML Integration", category: "AI" },
   { name: "Retool", category: "Automation" },
   { name: "Power BI", category: "Data" },
   { name: "ETL / ELT Pipelines", category: "Data" },
@@ -29,15 +33,12 @@ const technologies = [
   // DevOps & Cloud
   { name: "Docker", category: "DevOps" },
   { name: "AWS", category: "Cloud" },
+   { name: "CI/CD", category: "Cloud" },
 
   // Creative & Visualization
   { name: "Blender", category: "Creative" },
-  { name: "DaVinci Resolve", category: "Creative" },
-  { name: "Adobe Suite", category: "Creative" },
+  
 
-  // Networking & IoT
-  { name: "Cisco Packet Tracer", category: "Networking" },
-  { name: "Adafruit IO", category: "IoT" },
 ];
 
 const TechnologiesSection = () => {
@@ -50,8 +51,8 @@ const TechnologiesSection = () => {
             Tech Stack
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Technologies We{" "}
-            <span className="gradient-text">Master</span>
+            Technology {" "}
+            <span className="gradient-text">Stack</span>
           </h2>
           <p className="text-muted-foreground text-lg">
             We leverage cutting-edge technologies to build robust, scalable, and

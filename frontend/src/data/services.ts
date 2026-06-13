@@ -20,13 +20,36 @@ export interface Service {
 
 export const services: Service[] = [
   {
+    id: "web-development",
+    icon: Globe,
+    title: "Product Engineering",
+    shortDescription: "Scalable SaaS platforms, dashboards, and custom web applications.",
+    image: webDevImg,
+    description:
+    "We design and develop modern web applications, SaaS platforms, and internal tools. From customer-facing products to operational dashboards, we focus on scalable architecture, performance, and maintainable code that supports long-term growth.",
+      useCases: [
+      "Custom SaaS Platform Development",
+      "Dynamic E-commerce Ecosystems",
+      "Corporate Portals and Admin Dashboards",
+      "Progressive Web Apps (PWAs)",
+      "Interactive Real-time Web Tools"
+    ],
+    benefits: [
+      "Scalable architecture built for growth",
+      "Maintainable and well-documented codebases",
+      "Modern, responsive user experiences",
+      "Seamless integration with third-party services"
+    ],
+    technologies: ["React", "Next.js", "TypeScript", "Node.js", "Tailwind CSS", "PostgreSQL"],
+  },
+  {
     id: "data-engineering-automation",
     icon: Database,
-    title: "Data Engineering & Automation",
-    shortDescription: "Eliminating manual work through robust ETL pipelines and orchestration.",
+    title: "Business Automation Systems",
+    shortDescription: "Workflow automation, ETL pipelines, and operational efficiency tools.",
     image: DengImg, 
     description:
-      "As seen in our Case Studies, we build the 'central nervous system' for your business data. We automate the movement, transformation, and reconciliation of data across disparate systems to provide 100% operational accuracy.",
+    "We build systems that connect data, automate workflows, and eliminate repetitive operational tasks. From reporting pipelines to process automation, we help teams spend less time managing data and more time acting on it.",  
     useCases: [
       "Business process automation",
       "Workflow orchestration",
@@ -42,25 +65,25 @@ export const services: Service[] = [
 
     ],
     benefits: [
-      "90% reduction in manual data tasks",
-      "Elimination of human error in reporting",
-      "Proactive error detection and logging",
-      "Massive gains in operational efficiency",
-      "Clear and understandable dashboards",
-       "Improved data visibility",
-      "Lower operational costs",
-      "Quick deployment and iteration"
+        "Reduced manual operational workload",
+        "Consistent and reliable reporting workflows",
+        "Automated data movement across systems",
+         "Improved operational visibility",
+        "Centralized business intelligence",
+        "Faster access to actionable insights",
+        "Scalable automation infrastructure",
+        "Rapid deployment and iteration"
     ],
     technologies: ["Python", "JavaScript", "Retool", "Google Sheets", "n8n", "SQL", "REST APIs","Microsoft Excel","Power BI","Emails"],
   },
   {
     id: "mobile-development",
     icon: Smartphone,
-    title: "Mobile App Development",
-    shortDescription: "Premium iOS and Android applications with a focus on native performance.",
+    title: "Mobile Product Engineering",
+    shortDescription: "Cross-platform and native mobile applications for iOS and Android.",
     image: mobDevImg,
     description:
-      "We create mobile experiences that users love. Whether it's a cross-platform solution for rapid deployment or a high-performance native app, we ensure your mobile presence is fluid, secure, and feature-rich.",
+    "We develop mobile products for startups, businesses, and digital platforms. Whether you need a cross-platform application for rapid delivery or native experiences for platform-specific requirements, we build reliable and scalable mobile solutions.", 
     useCases: [
       "Cross-platform Apps (iOS & Android)",
       "Consumer-facing Mobile Products",
@@ -69,21 +92,21 @@ export const services: Service[] = [
       "IoT and Hardware-integrated Apps"
     ],
     benefits: [
-      "Single codebase for faster time-to-market",
-      "Native-level gestures and animations",
-      "Optimized battery and resource usage",
-      "App Store and Play Store launch support"
+      "Cross-platform development for faster delivery",
+      "Scalable mobile architecture",
+      "Reliable offline and real-time capabilities",
+      "App Store and Play Store deployment support"
     ],
     technologies: ["Flutter", "React Native", "Firebase", "Dart", "Swift", "Kotlin"],
   },
   {
     id: "3d-modeling-visualization",
     icon: Palette,
-    title: "3D Modeling & Visualization",
-    shortDescription: "Photorealistic 3D assets and cinematic animations for products.",
+    title: "Interactive Product Experiences",
+    shortDescription: "3D assets, visualizations, and immersive web experiences.",
     image: d3Img,
     description:
-      "We bring physical concepts into the digital world with high-fidelity 3D modeling. Our visuals are perfect for startups needing prototypes, e-commerce brands wanting perfect renders, or tech firms explaining complex hardware.",
+    "We create high-quality 3D assets, product visualizations, and interactive experiences for web, marketing, and product teams. These experiences help communicate complex products and create more engaging digital presentations.",  
     useCases: [
       "Photorealistic Product Rendering",
       "Explainer & Technical Animations",
@@ -92,21 +115,21 @@ export const services: Service[] = [
       "Digital Twin Visualizations"
     ],
     benefits: [
-      "Reduce cost of physical photography",
-      "Visualize products before manufacturing",
-      "High-impact marketing and pitch decks",
-      "Infinite flexibility in lighting and staging"
+        "Interactive product demonstrations",
+        "High-quality visual assets",
+        "Reduced reliance on physical prototypes",
+        "Flexible content for web and marketing use"
     ],
     technologies: ["Blender", "Three.js", "DaVinci Resolve", "Adobe Creative Suite"],
   },
   {
     id: "gen-ai-ml",
     icon: Brain,
-    title: "GenAI & Machine Learning",
-    shortDescription: "Custom AI agents, LLM integration, and predictive data modeling.",
+    title: "AI & Intelligent Automation",
+    shortDescription: "Custom AI agents, LLM integration, and predictive modeling.",
     image: AIImg,
     description:
-      "We help you move beyond the hype and implement functional AI. From building custom RAG (Retrieval-Augmented Generation) systems that talk to your company data to training models for predictive maintenance, we build AI that works.",
+    "We help organizations integrate practical AI capabilities into existing products and workflows. From AI assistants and knowledge retrieval systems to predictive analytics and automation, we focus on solutions that deliver measurable business value.",  
     useCases: [
       "Custom AI Chatbots & Customer Agents",
       "RAG Systems for Internal Knowledge Bases",
@@ -115,58 +138,13 @@ export const services: Service[] = [
       "Computer Vision for Asset Recognition"
     ],
     benefits: [
-      "Personalized customer experiences at scale",
-      "Data-driven forecasting and decision making",
-      "Automation of complex cognitive tasks",
-      "Unlock insights from unstructured data"
+      "AI-powered workflow automation",
+      "Natural language interfaces for users and teams",
+      "Improved access to organizational knowledge",
+      "Data-driven insights and forecasting"
     ],
     technologies: ["PyTorch", "OpenAI / Anthropic APIs", "LangChain", "Vector Databases", "Scikit-learn"],
   },
-  {
-    id: "web-development",
-    icon: Globe,
-    title: "Web Development",
-    shortDescription: "Scalable, high-performance web applications and enterprise-grade platforms.",
-    image: webDevImg,
-    description:
-      "We build more than just websites. We develop complex web applications focused on performance, SEO, and seamless user experiences. From custom dashboards to full-scale SaaS platforms, our web solutions are built to grow with your business.",
-    useCases: [
-      "Custom SaaS Platform Development",
-      "Dynamic E-commerce Ecosystems",
-      "Corporate Portals and Admin Dashboards",
-      "Progressive Web Apps (PWAs)",
-      "Interactive Real-time Web Tools"
-    ],
-    benefits: [
-      "Highly responsive and SEO-optimized",
-      "Secure and scalable cloud architecture",
-      "Lightning-fast load times and performance",
-      "Seamless third-party API integrations"
-    ],
-    technologies: ["React", "Next.js", "TypeScript", "Node.js", "Tailwind CSS", "PostgreSQL"],
-  },
-  {
-    id: "mvp-startup-accelerator",
-    icon: Layers,
-    title: "MVP & Startup Development",
-    shortDescription: "Turning vision into reality with rapid, investor-ready product launches.",
-    image: mvpImg,
-    description:
-      "We specialize in helping founders launch quickly. We focus on the core value proposition of your product, building a scalable foundation that allows for rapid iteration based on real user feedback.",
-    useCases: [
-      "Rapid Prototype Development (4-8 weeks)",
-      "Investor-ready MVPs",
-      "Proof-of-Concept for new features",
-      "Scalable Tech Stack Consulting"
-    ],
-    benefits: [
-      "Fastest path to market validation",
-      "Reduced initial development overhead",
-      "Scalable architecture from Day 1",
-      "Strategic technical partnership"
-    ],
-    technologies: ["MERN/T3 Stack", "AWS", "Docker", "Vercel", "Tailwind CSS"],
-  }
 ];
 
 export const getServiceById = (id: string): Service | undefined => {

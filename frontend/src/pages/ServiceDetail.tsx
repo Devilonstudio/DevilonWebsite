@@ -20,7 +20,7 @@ const ServiceDetail = () => {
   return (
     <PageLayout>
       <PageBanner
-        badge="Our Services"
+        badge="Engineering Capability"
         title={service.title}
         description={service.shortDescription}
       />
@@ -42,7 +42,7 @@ const ServiceDetail = () => {
               {/* Use Cases */}
               <div>
                 <h2 className="text-2xl font-bold text-foreground mb-6">
-                  Business Problems We Solve
+                  Typical Project Scenarios
                 </h2>
                 <div className="space-y-4">
                   {service.useCases.map((useCase, index) => (
@@ -59,18 +59,18 @@ const ServiceDetail = () => {
 
               {/* Our Approach */}
               <div>
-                <h2 className="text-2xl font-bold text-foreground mb-6">Our Approach</h2>
+                <h2 className="text-2xl font-bold text-foreground mb-6">Delivery Process</h2>
                 <div className="grid sm:grid-cols-2 gap-6">
                   {[
                     {
                       title: "Discovery Phase",
                       description:
-                        "We begin by understanding your business goals, target users, and technical requirements through in-depth workshops.",
+                        "We review project requirements, goals, constraints, and delivery expectations before development begins.",
                     },
                     {
                       title: "Strategic Planning",
                       description:
-                        "Our team creates detailed project roadmaps, architecture designs, and timeline estimates.",
+                        "We define architecture, technical scope, milestones, and implementation priorities.",
                     },
                     {
                       title: "Iterative Development",
@@ -80,7 +80,7 @@ const ServiceDetail = () => {
                     {
                       title: "Quality Assurance",
                       description:
-                        "Rigorous testing ensures reliability, security, and performance across all scenarios.",
+                        "Every deliverable is reviewed and tested for quality, reliability, security, and performance.",
                     },
                   ].map((step) => (
                     <div
@@ -106,7 +106,7 @@ const ServiceDetail = () => {
                 <div className="w-16 h-16 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
                   <Icon className="w-8 h-8 text-accent" />
                 </div>
-                <h3 className="font-bold text-foreground mb-4">Key Benefits</h3>
+                <h3 className="font-bold text-foreground mb-4">What You Get</h3>
                 <ul className="space-y-3">
                   {service.benefits.map((benefit, index) => (
                     <li
@@ -139,13 +139,13 @@ const ServiceDetail = () => {
 
               {/* CTA Card */}
               <div className="bg-primary rounded-2xl p-8 text-primary-foreground">
-                <h3 className="font-bold mb-3">Ready to Get Started?</h3>
+                <h3 className="font-bold mb-3">Need Additional Development Capacity?</h3>
                 <p className="text-primary-foreground/70 text-sm mb-6">
-                  Let's discuss how we can help with your {service.title.toLowerCase()} needs.
+                  Whether you're delivering a client project or expanding your product team, we can provide the technical expertise and execution support your {service.title.toLowerCase()} needs.
                 </p>
                 <Button variant="hero" size="lg" className="w-full" asChild>
                   <Link to="/contact">
-                    Talk to an Expert
+                    Discuss Your Project
                     <ArrowRight className="ml-2" size={18} />
                   </Link>
                 </Button>
@@ -164,7 +164,7 @@ const ServiceDetail = () => {
               className="inline-flex items-center text-muted-foreground hover:text-accent transition-colors"
             >
               <ArrowLeft className="mr-2 w-4 h-4" />
-              All Services
+              All Capabilities
             </Link>
             <Link
               to={`/services/${nextService.id}`}
