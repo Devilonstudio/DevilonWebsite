@@ -1,0 +1,25 @@
+# Devilon Studio
+
+> Devilon Studio is a small engineering team that audits and hardens apps built with AI tools such as Lovable, Bolt, Replit and Cursor. An audit reviews security, access control, payments, data and deployment, and returns a written report in five working days with a fixed quote to fix what is found. Audits start from $490. We also automate manual work, build data pipelines and dashboards, and build web, mobile and AI features.
+
+## Start here
+- [App audit](https://www.devilonstudio.com/ai-to-production): A fixed-price production-readiness audit for apps built with AI tools. Written report, honest fix-or-rebuild recommendation, and a fixed quote.
+- [Sample report](https://www.devilonstudio.com/sample-audit): See what a Devilon audit report looks like: findings, severity, fixes and effort, in an illustrative sample.
+- [Contact](https://www.devilonstudio.com/contact): Tell us what you're trying to build, fix or automate. We'll figure out whether we're the right team for it.
+
+## Services
+- [Product Builds & MVPs](https://www.devilonstudio.com/services/product-engineering): SaaS products, platforms and dashboards, built AI-accelerated and engineer-owned from day one.
+- [Mobile Apps](https://www.devilonstudio.com/services/mobile-apps): Cross-platform mobile apps with real backends, push notifications and store release support.
+- [Operations Automation](https://www.devilonstudio.com/services/automation-internal-tools): Connect the tools you already use, remove the copy-paste, and put your data on one dashboard.
+- [Data Engineering & Analytics](https://www.devilonstudio.com/services/data-engineering): Pipelines, databases and dashboards: get your data out of spreadsheets and silos, cleaned, connected and on a dashboard people trust.
+- [AI Integration](https://www.devilonstudio.com/services/ai-integration): Assistants, document processing and search over your own data, wired into real systems with human handoff.
+- [Agency Delivery](https://www.devilonstudio.com/services/white-label-delivery): Clients want software with someone accountable behind it. We own the technical side, under your brand.
+- [3D & Interactive Experiences](https://www.devilonstudio.com/services/interactive-3d): Product visualization, interactive 3D on the web and configurators for products that are easier to show than describe.
+
+## About
+- [About](https://www.devilonstudio.com/about): A small engineering team that audits and hardens AI-built apps and automates manual work for small teams.
+- [Agency partnerships](https://www.devilonstudio.com/agency-partnerships): Your client needs software someone is accountable for. Devilon delivers the engineering behind your brand.
+- [Sample builds](https://www.devilonstudio.com/case-studies): Representative builds across product engineering, automation and mobile.
+
+## Contact
+- Email: hello@devilonstudio.com

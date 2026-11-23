@@ -1,51 +1,105 @@
+
 <!doctype html>
 <html lang="en">
   <head>
-     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+
+    <!-- Browser theme colors -->
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: light)"
+      content="#ffffff"
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#0a0d14"
+    />
 
     <!-- Primary SEO -->
-    <title>Devilon Studio - Software, Data & AI Solutions</title>
+    <title>Devilon Studio — AI-Native Technical Delivery & Software Engineering</title>
     <meta
       name="description"
-      content="Devilon Studio is a software agency offering data engineering and automation, web and mobile app development, GenAI and machine learning solutions, 3D modeling and visualization, and MVP development for startups."
+      content="Devilon helps agencies and growing teams turn AI-built products, complex technical requirements and manual workflows into production software, automation and digital products."
     />
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://devilonstudio.com/" />
 
     <!-- Search engine directives -->
-    <meta name="robots" content="index, follow" />
-    <meta name="googlebot" content="index, follow" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="googlebot" content="index,follow" />
 
-    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
-    <meta property="og:title" content="Devilon Studio – Software, Data & AI Solutions" />
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/light.png" />
+    <link rel="apple-touch-icon" href="/light.png" />
+
+    <!-- Performance: Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      rel="preconnect"
+      href="https://cdn.jsdelivr.net"
+      crossorigin
+    />
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Devilon Studio" />
+    <meta
+      property="og:title"
+      content="Devilon Studio — AI-Native Technical Delivery & Software Engineering"
+    />
     <meta
       property="og:description"
-      content="We build data-driven, AI-powered software solutions including web and mobile apps, automation systems, GenAI, 3D visualization, and MVPs for startups."
+      content="AI can build the prototype. We make it production-ready. Technical delivery for agencies and product teams."
     />
-    <meta property="og:type" content="website" />
     <meta property="og:url" content="https://devilonstudio.com/" />
-    <meta property="og:image" content="https://devilonstudio.com/frontend/og-image.png" />
+    <meta
+      property="og:image"
+      content="https://devilonstudio.com/og-image.png"
+    />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Devilon Studio — AI-Native Technical Delivery & Software Engineering" />
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Devilon Studio - Software, Data & AI Solutions" />
+    <meta
+      name="twitter:title"
+      content="Devilon Studio — AI-Native Technical Delivery & Software Engineering"
+    />
     <meta
       name="twitter:description"
-      content="Software agency specializing in data engineering, automation, GenAI, web & mobile apps, 3D visualization, and startup MVPs."
+      content="AI can build the prototype. We make it production-ready. Technical delivery for agencies and product teams."
     />
-    <meta name="twitter:image" content="https://devilonstudio.com/frontend/og-image.png" />
+    <meta
+      name="twitter:image"
+      content="https://devilonstudio.com/og-image.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Devilon Studio — AI-Native Technical Delivery & Software Engineering"
+    />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/light.png" />
+    <!--
+      The build step (scripts/prerender-meta.mjs) rewrites the title,
+      description, canonical, social tags and structured data for every page.
 
+      Keep this file's <div id="root"> exactly as it is.
+    -->
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
-</html> 
+</html>

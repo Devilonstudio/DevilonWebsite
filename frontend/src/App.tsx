@@ -11,6 +11,10 @@ import CaseStudies from "./pages/CaseStudies";
 import CaseStudyDetail from "./pages/CaseStudyDetail";
 import Contact from "./pages/Contact";
 import AgencyPartnerships from "./pages/AgencyPartnerships";
+import AIToProduction from "./pages/AIToProduction";
+import SampleAudit from "./pages/SampleAudit";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +31,10 @@ const App = () => (
           <Route path="/services/:serviceId" element={<ServiceDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/agency-partnerships" element={<AgencyPartnerships />} />
+          <Route path="/ai-to-production" element={<AIToProduction />} />
+          <Route path="/sample-audit" element={<SampleAudit />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/case-studies/:caseStudyId" element={<CaseStudyDetail />} />
           <Route path="/contact" element={<Contact />} />

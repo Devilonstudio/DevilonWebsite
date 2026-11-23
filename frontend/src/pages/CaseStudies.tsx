@@ -4,88 +4,36 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import PageLayout from "@/components/layout/PageLayout";
 import PageBanner from "@/components/shared/PageBanner";
 import { caseStudies } from "@/data/caseStudies";
+import ProjectVisual from "@/components/shared/ProjectVisual";
 
 const CaseStudies = () => {
   return (
     <PageLayout>
       <PageBanner
-        badge="Representative Projects"
-        title="Project"
-        titleHighlight="Highlights"
-        description="Examples of the products, platforms, and systems our team is equipped to deliver for agencies, startups, and growing businesses."
+        badge="Our Work"
+        title="How we build,"
+        titleHighlight="by example."
+        description="Representative builds for each kind of project we take on: product engineering, automation and mobile."
       />
 
-      {/* Case Studies */}
-      <section className="py-24 lg:py-32 bg-background">
+      <section className="py-20 lg:py-28 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <span className="text-accent font-bold text-sm uppercase tracking-wider mb-4 block">
-              Featured Work
-            </span>
+          <p className="text-sm text-muted-foreground max-w-2xl mb-12">
+            Representative builds created to show how we approach each type of project. Client work is shown separately, where permission allows.
+          </p>
 
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-foreground mb-6">
-              Project{" "}
-              <span className="gradient-text">Highlights</span>
-            </h2>
-
-            <p className="text-foreground/60 text-xl">
-              Examples of the products, platforms, and systems our team is
-              equipped to deliver.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-10 max-w-7xl mx-auto">
-            {caseStudies.map((study, index) => (
-              <Link
-                key={study.id}
-                to={`/case-studies/${study.id}`}
-                className={`group relative overflow-hidden rounded-3xl border border-zinc-800 bg-black min-h-[520px] transition-all duration-500 hover:border-blue-500/40 hover:shadow-2xl ${
-                  index % 2 === 1 ? "lg:translate-y-16" : ""
-                }`}
-              >
-                {/* Background Image */}
-                <div className="absolute inset-0">
-                  <img
-                    src={study.image}
-                    alt={study.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20" />
+          <div className="border-t border-foreground">
+            {caseStudies.map((study, i) => (
+              <Link key={study.id} to={`/case-studies/${study.id}`} className="group grid md:grid-cols-[1fr_1.1fr] gap-8 md:gap-14 items-center py-10 border-b border-foreground/20">
+                <div className={i % 2 ? "md:order-2" : ""}>
+                  <ProjectVisual variant={study.visual} className="aspect-[16/10] w-full" />
                 </div>
-
-                {/* Accent Line */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                {/* Blue Glow */}
-                <div className="absolute -top-20 -right-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
-
-                {/* Project Number */}
-                <div className="absolute top-8 right-8 z-10">
-                  <span className="text-8xl font-black text-blue-500/20 group-hover:text-blue-500/40 transition-colors">
-                    0{index + 1}
-                  </span>
-                </div>
-
-                {/* Content */}
-                <div className="absolute bottom-0 left-0 right-0 p-10 z-10">
-                  <span className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-bold uppercase tracking-wider mb-4">
-                    {study.industry}
-                  </span>
-
-                  <h3 className="text-4xl font-black text-white mb-4 group-hover:text-blue-400 transition-colors">
-                    {study.title}
-                  </h3>
-
-                  <p className="text-white/70 text-lg leading-relaxed mb-8 max-w-xl">
-                    {study.shortDescription}
-                  </p>
-
-                  <div className="h-px bg-gradient-to-r from-blue-500/50 via-white/10 to-transparent mb-6" />
-
-                  <span className="inline-flex items-center text-blue-400 text-sm font-bold uppercase tracking-widest">
-                    View Case Study
-                    <ArrowUpRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-2 group-hover:-translate-y-1" />
+                <div>
+                  <p className="font-mono-ui text-xs uppercase tracking-[0.14em] text-accent mb-4">{String(i + 1).padStart(2, "0")} · {study.service}</p>
+                  <h2 className="text-3xl md:text-4xl text-foreground group-hover:text-accent transition-colors mb-4">{study.title}</h2>
+                  <p className="text-muted-foreground text-lg leading-relaxed mb-6 max-w-lg">{study.shortDescription}</p>
+                  <span className="inline-flex items-center font-bold uppercase tracking-wide text-sm text-accent">
+                    See the approach <ArrowUpRight className="ml-1.5 w-4 h-4" />
                   </span>
                 </div>
               </Link>
@@ -94,26 +42,19 @@ const CaseStudies = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 lg:py-28 section-dark">
+      <section className="py-20 lg:py-28 section-dark on-dark">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-              Looking for a Reliable{" "}
-              <span className="gradient-text">
-                White-Label Development Partner?
-              </span>
+          <div className="max-w-3xl">
+            <h2 className="text-primary-foreground mb-6">
+              Want to see how we'd handle <span className="gradient-text">your</span> problem?
             </h2>
-
             <p className="text-primary-foreground/70 text-lg mb-8">
-              Whether you need help with a single project or ongoing delivery
-              support, our team can operate as an extension of your agency.
+              Describe what you're working on and we'll tell you honestly whether we're the right team.
             </p>
-
             <Button variant="hero" size="xl" asChild>
               <Link to="/contact">
-                Discuss a Partnership
-                <ArrowRight className="ml-2" size={20} />
+                Discuss Your Product
+                <ArrowRight />
               </Link>
             </Button>
           </div>

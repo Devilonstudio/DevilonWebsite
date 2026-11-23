@@ -1,96 +1,57 @@
-import { Search, PenTool, Code, TestTube, Rocket } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const steps = [
-  {
-    icon: Search,
-    number: "01",
-    title: "Project Handoff",
-    description:
-      "Requirements, designs, and goals are transferred into our engineering workflow.",
-  },
-  {
-    icon: PenTool,
-    number: "02",
-    title: "Technical Planning",
-    description:
-      "We define architecture, stack, timeline, and delivery milestones.",
-  },
-  {
-    icon: Code,
-    number: "03",
-    title: "Development Sprints",
-    description:
-      "Structured development with regular updates and transparent progress.",
-  },
-  {
-    icon: TestTube,
-    number: "04",
-    title: "QA & Review",
-    description: "Testing, fixes, and quality checks before delivery.",
-  },
-  {
-    icon: Rocket,
-    number: "05",
-    title: "Client Delivery Support",
-    description: "Documentation, deployment, and continued maintenance.",
-  },
+  ["Audit", "We read the code, the architecture and the risks, then tell you what we found."],
+  ["Plan", "A fix-or-rebuild recommendation, a scope and a quote you can plan around."],
+  ["Build", "AI-assisted engineering with human review, in short cycles you can see."],
+  ["Validate", "Testing, security review, performance and the edge cases demos skip."],
+  ["Ship", "Deployment, monitoring, documentation and a proper handover."],
 ];
 
 const ProcessSection = () => {
+  const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  useEffect(() => {
+    if (paused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const t = setInterval(() => setActive((a) => (a + 1) % steps.length), 2600);
+    return () => clearInterval(t);
+  }, [paused]);
+
   return (
-    <section id="process" className="py-16 lg:py-24 bg-background">
+    <section id="how-we-work" className="py-24 lg:py-32 bg-background scroll-mt-20">
       <div className="container mx-auto px-4 lg:px-8">
-
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 lg:mb-16">
-          <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-4 block">
-            Our Process
-          </span>
-
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            How We Turn Ideas Into{" "}
-            <span className="gradient-text">Reality</span>
-          </h2>
-
-          <p className="text-muted-foreground text-lg">
-            A proven methodology that ensures transparency, quality, and
-            successful outcomes at every stage.
-          </p>
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+          <div>
+            <p className="eyebrow mb-5">How we work</p>
+            <h2 className="text-foreground">From audit to launch.</h2>
+          </div>
+          <p className="text-muted-foreground max-w-sm">For agencies, the same five steps run inside your existing workflow and under your brand.</p>
         </div>
 
-        {/* Steps */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
-          {steps.map((step) => {
-            const Icon = step.icon;
-
+        <ol className="grid md:grid-cols-5 border border-foreground" onMouseLeave={() => setPaused(false)}>
+          {steps.map(([t, d], i) => {
+            const on = active === i;
             return (
-              <div
-                key={step.title}
-                className="group relative bg-card border border-border rounded-2xl p-6 text-center transition-all duration-300 hover:border-accent/40 hover:-translate-y-2 hover:shadow-xl"
+              <li
+                key={t}
+                onMouseEnter={() => { setActive(i); setPaused(true); }}
+                className={`relative p-6 lg:p-7 min-h-[17rem] flex flex-col justify-between border-b md:border-b-0 md:border-r border-foreground last:border-0 transition-colors duration-300 ${on ? "bg-accent text-white" : "bg-background text-foreground"}`}
               >
-                {/* Step Number (background style) */}
-                <div className="absolute top-3 right-4 text-4xl font-black text-accent/10">
-                  {step.number}
+                <span
+                  className="font-display font-black text-6xl lg:text-7xl leading-none transition-colors"
+                  style={{ color: on ? "rgba(255,255,255,0.95)" : "transparent", WebkitTextStroke: on ? "0" : "1px hsl(var(--foreground))" }}
+                >
+                  {i + 1}
+                </span>
+                <div>
+                  <h3 className={`text-2xl mb-2 ${on ? "text-white" : "text-foreground"}`}>{t}</h3>
+                  <p className={`text-sm leading-relaxed ${on ? "text-white/90" : "text-muted-foreground"}`}>{d}</p>
                 </div>
-
-                {/* Icon */}
-                <div className="w-16 h-16 mx-auto mb-5 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center group-hover:bg-accent/15 transition-all duration-300">
-                  <Icon className="w-7 h-7 text-accent" />
-                </div>
-
-                {/* Title */}
-                <h3 className="font-bold text-foreground mb-3 text-lg group-hover:text-accent transition-colors">
-                  {step.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
+              </li>
             );
           })}
-        </div>
+        </ol>
       </div>
     </section>
   );
