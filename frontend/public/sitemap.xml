@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://devilonstudio.com/</loc>
-    <lastmod>2026-01-26</lastmod>
-    <priority>1.00</priority>
-  </url>
-
-  <url>
-    <loc>https://devilonstudio.com/services</loc>
-    <lastmod>2026-01-26</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://devilonstudio.com/case-studies</loc>
-    <lastmod>2026-01-26</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://devilonstudio.com/about</loc>
-    <lastmod>2026-01-26</lastmod>
-    <priority>0.70</priority>
-  </url>
+  <url><loc>https://www.devilonstudio.com/</loc></url>
+  <url><loc>https://www.devilonstudio.com/ai-to-production</loc></url>
+  <url><loc>https://www.devilonstudio.com/sample-audit</loc></url>
+  <url><loc>https://www.devilonstudio.com/services</loc></url>
+  <url><loc>https://www.devilonstudio.com/services/product-engineering</loc></url>
+  <url><loc>https://www.devilonstudio.com/services/mobile-apps</loc></url>
+  <url><loc>https://www.devilonstudio.com/services/automation-internal-tools</loc></url>
+  <url><loc>https://www.devilonstudio.com/services/data-engineering</loc></url>
+  <url><loc>https://www.devilonstudio.com/services/ai-integration</loc></url>
+  <url><loc>https://www.devilonstudio.com/services/white-label-delivery</loc></url>
+  <url><loc>https://www.devilonstudio.com/services/interactive-3d</loc></url>
+  <url><loc>https://www.devilonstudio.com/agency-partnerships</loc></url>
+  <url><loc>https://www.devilonstudio.com/case-studies</loc></url>
+  <url><loc>https://www.devilonstudio.com/case-studies/saas-dashboard-platform</loc></url>
+  <url><loc>https://www.devilonstudio.com/case-studies/internal-operations-system</loc></url>
+  <url><loc>https://www.devilonstudio.com/case-studies/mobile-product-platform</loc></url>
+  <url><loc>https://www.devilonstudio.com/about</loc></url>
+  <url><loc>https://www.devilonstudio.com/contact</loc></url>
+  <url><loc>https://www.devilonstudio.com/privacy</loc></url>
+  <url><loc>https://www.devilonstudio.com/terms</loc></url>
 </urlset>

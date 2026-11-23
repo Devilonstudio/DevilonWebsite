@@ -1,0 +1,227 @@
+{
+  "pages": [
+    {
+      "path": "/",
+      "title": "Devilon Studio — Production-Readiness Audits for AI-Built Apps",
+      "description": "Fixed-price audits for apps built with Lovable, Bolt, Replit and Cursor: security, access control, payments and deployment, with a written report and a fixed quote to fix what is found.",
+      "h1": "Your AI-built app works. Is it ready for real users?",
+      "summary": "Devilon Studio is a small engineering team that audits and hardens apps built with AI tools such as Lovable, Bolt, Replit and Cursor. An audit reviews security, access control, payments, data and deployment, and returns a written report in {turnaround} with a fixed quote to fix what is found. Audits start from {price}. We also automate manual work, build data pipelines and dashboards, and build web, mobile and AI features.",
+      "type": "home",
+      "crumb": "Home",
+      "faq": true
+    },
+    {
+      "path": "/ai-to-production",
+      "title": "App Audit — Is Your AI-Built App Ready for Real Users? | Devilon Studio",
+      "description": "A fixed-price production-readiness audit for apps built with AI tools. Written report, honest fix-or-rebuild recommendation, and a fixed quote.",
+      "h1": "Is your AI-built app ready for real users?",
+      "summary": "A fixed-price audit of apps built with Lovable, Bolt, Replit, Cursor and similar tools. We review access control, auth and secrets, payments, data and deployment, then give you a written report, a fix-or-rebuild recommendation and a fixed quote. From {price}, report in {turnaround}. An audit is not a guarantee that an app is free of vulnerabilities.",
+      "type": "audit",
+      "crumb": "App audit",
+      "faq": true
+    },
+    {
+      "path": "/sample-audit",
+      "title": "Sample App Audit Report | Devilon Studio",
+      "description": "See what a Devilon audit report looks like: findings, severity, fixes and effort, in an illustrative sample.",
+      "h1": "What an audit looks like",
+      "summary": "An illustrative sample report showing the format and depth of a Devilon audit: seven example findings, each with a severity, a plain-English explanation, a fix and an effort estimate. It is not from a client engagement.",
+      "type": "sample",
+      "crumb": "Sample report"
+    },
+    {
+      "path": "/services",
+      "title": "Services — Devilon Studio",
+      "description": "App audit and hardening, operations automation, data engineering, product builds, mobile apps, AI integration, agency delivery and 3D.",
+      "h1": "Three things we do first, and a few we also build",
+      "summary": "Most clients start with an app audit, an operations automation project or a data engineering project. We also build products and MVPs, mobile apps, AI integrations, 3D experiences, and provide white-label delivery for agencies.",
+      "type": "list",
+      "crumb": "Services"
+    },
+    {
+      "path": "/services/product-engineering",
+      "title": "Product Builds & MVPs — Devilon Studio",
+      "description": "SaaS products, platforms and dashboards, built AI-accelerated and engineer-owned from day one.",
+      "h1": "Product Builds & MVPs",
+      "summary": "We build new products with AI tooling doing the heavy typing and engineers doing the architecture, data model, security and review.",
+      "type": "service",
+      "crumb": "Product Builds & MVPs"
+    },
+    {
+      "path": "/services/mobile-apps",
+      "title": "Mobile App Development (iOS & Android) — Devilon Studio",
+      "description": "Cross-platform mobile apps with real backends, push notifications and store release support.",
+      "h1": "Mobile Apps",
+      "summary": "One codebase for iOS and Android where that makes sense. We handle the app, the API behind it and store submission.",
+      "type": "service",
+      "crumb": "Mobile Apps"
+    },
+    {
+      "path": "/services/automation-internal-tools",
+      "title": "Operations Automation & Internal Tools — Devilon Studio",
+      "description": "Connect the tools you already use, remove the copy-paste, and put your data on one dashboard.",
+      "h1": "Operations Automation",
+      "summary": "Workflow automation with n8n and custom code, integrations between existing tools, reporting dashboards and internal admin tools.",
+      "type": "service",
+      "crumb": "Operations Automation"
+    },
+    {
+      "path": "/services/data-engineering",
+      "title": "Data Engineering & Analytics — Devilon Studio",
+      "description": "Pipelines, databases and dashboards: get your data out of spreadsheets and silos, cleaned, connected and on a dashboard people trust.",
+      "h1": "Data Engineering & Analytics",
+      "summary": "We build ETL and ELT pipelines, web scraping and API data collection, databases and dashboards, so your data is collected, cleaned, connected and reported on automatically.",
+      "type": "service",
+      "crumb": "Data Engineering & Analytics"
+    },
+    {
+      "path": "/services/ai-integration",
+      "title": "AI Integration — Devilon Studio",
+      "description": "Assistants, document processing and search over your own data, wired into real systems with human handoff.",
+      "h1": "AI Integration",
+      "summary": "We add AI where it earns its place: answering questions from your documents, extracting data from files and classifying requests, with guardrails.",
+      "type": "service",
+      "crumb": "AI Integration"
+    },
+    {
+      "path": "/services/white-label-delivery",
+      "title": "Agency Delivery — White-Label Engineering | Devilon Studio",
+      "description": "Clients want software with someone accountable behind it. We own the technical side, under your brand.",
+      "h1": "Agency Delivery",
+      "summary": "White-label engineering for agencies and studios: client portals, web apps, dashboards and integrations, delivered under your brand, with an NDA first.",
+      "type": "service",
+      "crumb": "Agency Delivery"
+    },
+    {
+      "path": "/services/interactive-3d",
+      "title": "3D & Interactive Experiences — Devilon Studio",
+      "description": "Product visualization, interactive 3D on the web and configurators for products that are easier to show than describe.",
+      "h1": "3D & Interactive Experiences",
+      "summary": "3D modeling and renders in Blender and interactive 3D for the web, including product configurators.",
+      "type": "service",
+      "crumb": "3D & Interactive Experiences"
+    },
+    {
+      "path": "/services/ai-to-production",
+      "title": "App Audit & Hardening — Devilon Studio",
+      "description": "Fixed-price audits and hardening for apps built with AI tools.",
+      "h1": "App Audit & Hardening",
+      "summary": "See the App Audit page.",
+      "type": "service",
+      "crumb": "App Audit & Hardening",
+      "canonical": "/ai-to-production",
+      "sitemap": false
+    },
+    {
+      "path": "/agency-partnerships",
+      "title": "Technical Delivery for Agencies | Devilon Studio",
+      "description": "Your client needs software someone is accountable for. Devilon delivers the engineering behind your brand.",
+      "h1": "Your client needs software. You don't need an engineering department.",
+      "summary": "Devilon works behind the scenes as a technical delivery partner for branding, design and marketing agencies. You keep the client relationship and the brand; we handle the engineering, with an NDA first and a clean handover.",
+      "type": "page",
+      "crumb": "Agency partnerships"
+    },
+    {
+      "path": "/case-studies",
+      "title": "Sample Builds — Devilon Studio",
+      "description": "Representative builds across product engineering, automation and mobile.",
+      "h1": "How we build, by example",
+      "summary": "Representative builds that show how we approach each type of project. They are not client work.",
+      "type": "list",
+      "crumb": "Sample builds"
+    },
+    {
+      "path": "/case-studies/saas-dashboard-platform",
+      "title": "AI-Built SaaS, Production-Hardened — Sample Build | Devilon Studio",
+      "description": "A representative build: AI-Built SaaS, Production-Hardened. Not client work.",
+      "h1": "AI-Built SaaS, Production-Hardened",
+      "summary": "A representative build, AI-Built SaaS, Production-Hardened, created to show how we approach this kind of project. It makes no claims about real users or results.",
+      "type": "casestudy",
+      "crumb": "AI-Built SaaS, Production-Hardened"
+    },
+    {
+      "path": "/case-studies/internal-operations-system",
+      "title": "Operations Automation Hub — Sample Build | Devilon Studio",
+      "description": "A representative build: Operations Automation Hub. Not client work.",
+      "h1": "Operations Automation Hub",
+      "summary": "A representative build, Operations Automation Hub, created to show how we approach this kind of project. It makes no claims about real users or results.",
+      "type": "casestudy",
+      "crumb": "Operations Automation Hub"
+    },
+    {
+      "path": "/case-studies/mobile-product-platform",
+      "title": "Cross-Platform Mobile Product — Sample Build | Devilon Studio",
+      "description": "A representative build: Cross-Platform Mobile Product. Not client work.",
+      "h1": "Cross-Platform Mobile Product",
+      "summary": "A representative build, Cross-Platform Mobile Product, created to show how we approach this kind of project. It makes no claims about real users or results.",
+      "type": "casestudy",
+      "crumb": "Cross-Platform Mobile Product"
+    },
+    {
+      "path": "/about",
+      "title": "About — Devilon Studio",
+      "description": "A small engineering team that audits and hardens AI-built apps and automates manual work for small teams.",
+      "h1": "Software is easier to start. We help you finish it.",
+      "summary": "Devilon Studio is a small engineering team, started in 2025 and made up of five people covering web, mobile, data and automation, AI and 3D. Our mission is to make software dependable for the people who rely on it.",
+      "type": "about",
+      "crumb": "About"
+    },
+    {
+      "path": "/contact",
+      "title": "Contact — Book an Audit | Devilon Studio",
+      "description": "Tell us what you're trying to build, fix or automate. We'll figure out whether we're the right team for it.",
+      "h1": "Have something that needs to be built?",
+      "summary": "Send us a message, or email {email}. Tell us what you are trying to build, fix or automate.",
+      "type": "contact",
+      "crumb": "Contact"
+    },
+    {
+      "path": "/privacy",
+      "title": "Privacy Policy — Devilon Studio",
+      "description": "What personal information Devilon Studio collects through this website and by email, why, and your rights.",
+      "h1": "Privacy Policy",
+      "summary": "How Devilon Studio collects, uses and protects personal information from the contact form, email and outreach, and your rights over it.",
+      "type": "page",
+      "crumb": "Privacy Policy"
+    },
+    {
+      "path": "/terms",
+      "title": "Terms of Service — Devilon Studio",
+      "description": "The terms for using the Devilon Studio website and how our audit and project work is handled.",
+      "h1": "Terms of Service",
+      "summary": "The basics of using the Devilon Studio website and how app audits and project work are handled, including what an audit does and does not guarantee.",
+      "type": "page",
+      "crumb": "Terms of Service"
+    }
+  ],
+  "faq": [
+    [
+      "What do you need from me?",
+      "Read access to the code (a repo invite or an export), a short walkthrough of what the app does, and a test account. We don't need production data."
+    ],
+    [
+      "Will you change my app during the audit?",
+      "No. The audit is read-only. Fixes are quoted separately and only start when you say yes."
+    ],
+    [
+      "Do you sign an NDA?",
+      "Yes. We'll sign yours, or send ours, before you share any code."
+    ],
+    [
+      "My app isn't built on Lovable or Bolt. Can you still audit it?",
+      "Yes. AI-built apps are our focus because they share predictable gaps, but the review applies to any web app on a stack we know: React, Next.js, Node, Python and Postgres."
+    ],
+    [
+      "How is the price set?",
+      "Fixed, and shown as a \"from\" price ({price} and up) depending on the size of the app. We confirm the exact fee before we start."
+    ],
+    [
+      "What happens after the report?",
+      "You decide. Fix it yourself using the report, ask us for a fixed quote, or hand it to another developer. The report is yours either way."
+    ],
+    [
+      "Does an audit guarantee my app is secure?",
+      "No. It reviews the areas listed in the report and tells you what we found. No review can guarantee the absence of vulnerabilities."
+    ]
+  ]
+}

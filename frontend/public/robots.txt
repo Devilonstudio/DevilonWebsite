@@ -1,16 +1,24 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
+# Devilon Studio
+# Search engines and AI assistants are welcome. Editing this file: keep one blank line between groups.
 
 User-agent: *
 Allow: /
 
-Sitemap: https://devilonstudio.com/sitemap.xml
+# AI search, assistant and answer-engine crawlers (allowed explicitly so the intent is clear)
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: GPTBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: ClaudeBot
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+Allow: /
+
+# To opt out of AI model TRAINING but stay visible in AI search, change the Allow to Disallow in a separate group for:
+#   GPTBot, ClaudeBot, Google-Extended, Applebot-Extended, CCBot
+
+Sitemap: https://www.devilonstudio.com/sitemap.xml

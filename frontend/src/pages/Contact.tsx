@@ -1,15 +1,22 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin, Send, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Mail, Send } from "lucide-react";
+import { site } from "@/config/site";
+import { submitContact } from "@/lib/contact";
 import PageLayout from "@/components/layout/PageLayout";
 import PageBanner from "@/components/shared/PageBanner";
 
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
+  const [wantsNda, setWantsNda] = useState(false);
+  const openedAt = useRef(Date.now());
+  const [extra, setExtra] = useState({ need: "", timeline: "", existing: "" });
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,63 +31,57 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Detect environment: use full URL for local dev
-  const API_URL = import.meta.env.DEV
-    ? "http://localhost:3000/api/contact"
-    : "/api/contact";
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    try {
-      const res = await fetch(API_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+    const result = await submitContact({
+      name: formData.name,
+      email: formData.email,
+      company: formData.company,
+      need: extra.need,
+      timeline: extra.timeline,
+      existingLink: extra.existing,
+      message: formData.message,
+      wantsNda,
+      honeypot,
+      elapsedMs: Date.now() - openedAt.current,
+    });
 
-      if (!res.ok) {
-        const errData = await res.json();
-        throw new Error(errData?.error || "Submission failed");
-      }
-
-      toast({
-        title: "Message sent!",
-        description: "We'll get back to you within 24 hours.",
-      });
-
-      // Reset form
+    if (result.ok) {
+      toast({ title: "Message sent!", description: "Thanks. We'll reply by email." });
       setFormData({ name: "", email: "", company: "", message: "" });
-    } catch (error: any) {
-      toast({
-        title: "Something went wrong",
-        description: error.message || "Please try again later.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
+      setExtra({ need: "", timeline: "", existing: "" });
+      setWantsNda(false);
+    } else {
+      toast({ title: "Something went wrong", description: result.error, variant: "destructive" });
     }
+    setIsSubmitting(false);
   };
 
   return (
     <PageLayout>
       <PageBanner
-        badge="Get in Touch"
-        title="Contact"
-        titleHighlight="Us"
-        description="Need a development partner for your next project? Tell us what you're working on and we'll explore how we can help."
+        badge="Contact"
+        title="Have something that"
+        titleHighlight="needs to be built?"
+        description="Tell us what you're trying to build, fix or automate. We'll figure out whether we're the right team for it."
+        compact
       />
 
-      <section className="py-20 lg:py-28 bg-background">
+      <section className="py-12 lg:py-16 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
-            <div>
+            <div id="contact-form" className="scroll-mt-24">
               <h2 className="text-2xl font-bold text-foreground mb-6">
-                Let's Discuss Your Project
+                Start a Project
               </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
+                <div aria-hidden="true" className="absolute left-[-9999px] h-0 w-0 overflow-hidden">
+                  <label htmlFor="website">Leave this field empty</label>
+                  <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" value={honeypot} onChange={(e) => setHoneypot(e.target.value)} />
+                </div>
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
@@ -127,9 +128,40 @@ const Contact = () => {
                     className="h-12"
                   />
                 </div>
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="need" className="block text-sm font-medium text-foreground mb-2">What do you need help with?</label>
+                    <select
+                      id="need"
+                      value={extra.need}
+                      onChange={(e) => setExtra((p) => ({ ...p, need: e.target.value }))}
+                      className="h-12 w-full rounded-md border border-input bg-background px-3 text-sm"
+                    >
+                      <option value="">Select one</option>
+                      <option>Audit my AI-built app</option>
+                      <option>Technical delivery for an agency client</option>
+                      <option>Automation or internal tools</option>
+                      <option>Data pipelines or dashboards</option>
+                      <option>Web or mobile product</option>
+                      <option>AI integration</option>
+                      <option>Interactive 3D</option>
+                      <option>Not sure yet</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="timeline" className="block text-sm font-medium text-foreground mb-2">Timeline</label>
+                    <Input
+                      id="timeline"
+                      value={extra.timeline}
+                      onChange={(e) => setExtra((p) => ({ ...p, timeline: e.target.value }))}
+                      placeholder="e.g. launch in 6 weeks"
+                      className="h-12"
+                    />
+                  </div>
+                </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                    Message *
+                    What are you building? *
                   </label>
                   <Textarea
                     id="message"
@@ -137,11 +169,26 @@ const Contact = () => {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Tell us about your project..."
-                    rows={6}
+                    placeholder="What are you trying to build, fix or automate?"
+                    rows={5}
                     className="resize-none"
                   />
                 </div>
+                <div>
+                  <label htmlFor="existing" className="block text-sm font-medium text-foreground mb-2">Link to your app or repo</label>
+                  <Input
+                    id="existing"
+                    value={extra.existing}
+                    onChange={(e) => setExtra((p) => ({ ...p, existing: e.target.value }))}
+                    placeholder="Link to the live app or repo, and what it was built with"
+                    className="h-12"
+                  />
+                </div>
+                <label className="flex items-start gap-3 text-sm text-muted-foreground cursor-pointer">
+                  <input type="checkbox" checked={wantsNda} onChange={(e) => setWantsNda(e.target.checked)} className="mt-1 h-4 w-4 accent-[hsl(var(--accent))]" />
+                  <span>Send me an NDA before I share anything. We'll sign yours or send ours.</span>
+                </label>
+                <p className="text-xs text-muted-foreground">We use your details only to reply and to run any work we do together. See our <Link to="/privacy" className="underline underline-offset-4">Privacy Policy</Link>.</p>
                 <Button
                   type="submit"
                   variant="cta"
@@ -157,10 +204,29 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-2xl font-bold text-foreground mb-6">Contact Information</h2>
+                <h2 className="text-2xl font-bold text-foreground mb-6">Prefer email?</h2>
                 <p className="text-muted-foreground mb-8">
-                  Have questions before getting started? Reach out directly and we'll help determine the best way to work together.
+                  Write to us directly and we'll reply with next steps.
                 </p>
+              </div>
+
+              <div className="mb-8 rounded-2xl border border-border bg-card p-6">
+                <h3 className="font-semibold text-foreground mb-4">What happens next</h3>
+                <ol className="space-y-4">
+                  {[
+                    ["We read your message", "And reply by email, usually with a few questions."],
+                    ["A short call, if it helps", "We ask about the app, who uses it and what worries you."],
+                    ["A fixed quote", "For the audit or the project, confirmed before anything starts."],
+                  ].map(([t, d], i) => (
+                    <li key={t} className="flex gap-4">
+                      <span className="w-7 h-7 rounded-full bg-accent text-white text-sm font-semibold flex items-center justify-center flex-shrink-0">{i + 1}</span>
+                      <span>
+                        <span className="block font-medium text-foreground">{t}</span>
+                        <span className="block text-sm text-muted-foreground">{d}</span>
+                      </span>
+                    </li>
+                  ))}
+                </ol>
               </div>
 
               <div className="space-y-6">
@@ -170,28 +236,14 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                    <a href="mailto:contact@devilonstudio.com" className="text-muted-foreground hover:text-accent transition-colors">
-                      contact@devilonstudio.com
+                    <a href="mailto:hello@devilonstudio.com" className="text-muted-foreground hover:text-accent transition-colors">
+                      hello@devilonstudio.com
                     </a>
                   </div>
                 </div>
 
               </div>
 
-              {/* Social Links */}
-              <div className="pt-8 border-t border-border">
-                <h3 className="font-semibold text-foreground mb-4">Follow Us</h3>
-                <div className="flex gap-4">
-                  {[{ icon: Linkedin, href: "#", label: "LinkedIn" }].map((social) => {
-                    const Icon = social.icon;
-                    return (
-                      <a key={social.label} href={social.href} aria-label={social.label} className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center hover:bg-accent transition-colors group">
-                        <Icon className="w-5 h-5 text-secondary-foreground group-hover:text-accent-foreground" />
-                      </a>
-                    );
-                  })}
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -208,15 +260,15 @@ const Contact = () => {
               {[
                 {
                   q: "What's your typical project timeline?",
-                  a: "Timelines vary based on scope and complexity. Most projects begin with a discovery phase, after which we provide a delivery roadmap and estimate.",
+                  a: "It depends on scope. We start by understanding what exists, then give you a plan and an estimate.",
                 },
                 {
                   q: "Do you work with agencies?",
-                  a: "Yes. We regularly support agencies, studios, and consulting firms that need reliable development capacity for client projects.",
+                  a: "Yes. We work behind your brand as your technical delivery partner when a client needs software outside your core capability.",
                 },
                 {
                   q: "What's your engagement model?",
-                  a: "We support both direct client projects and white-label partnerships. Whether you need help delivering a single project or ongoing engineering support, we can adapt to your workflow.",
+                  a: "We support direct projects and white-label partnerships, for a single project or ongoing work.",
                 },
               ].map((faq) => (
                 <div

@@ -1,0 +1,243 @@
+{
+  "React": {
+    "marks": [
+      {
+        "slug": "react",
+        "color": "#0EA5C6"
+      }
+    ]
+  },
+  "Next.js": {
+    "marks": [
+      {
+        "slug": "nextdotjs",
+        "color": "#0A0A0A"
+      }
+    ]
+  },
+  "TypeScript": {
+    "marks": [
+      {
+        "slug": "typescript",
+        "color": "#3178C6"
+      }
+    ]
+  },
+  "Tailwind CSS": {
+    "marks": [
+      {
+        "slug": "tailwindcss",
+        "color": "#06B6D4"
+      }
+    ]
+  },
+  "Flutter": {
+    "marks": [
+      {
+        "slug": "flutter",
+        "color": "#02569B"
+      }
+    ]
+  },
+  "React Native": {
+    "marks": [
+      {
+        "slug": "react",
+        "color": "#0EA5C6"
+      }
+    ]
+  },
+  "Node.js": {
+    "marks": [
+      {
+        "slug": "nodedotjs",
+        "color": "#5FA04E"
+      }
+    ]
+  },
+  "Python": {
+    "marks": [
+      {
+        "slug": "python",
+        "color": "#3776AB"
+      }
+    ]
+  },
+  "REST & webhooks": {
+    "icon": "Webhook"
+  },
+  "PHP": {
+    "marks": [
+      {
+        "slug": "php",
+        "color": "#777BB4"
+      }
+    ]
+  },
+  "PostgreSQL": {
+    "marks": [
+      {
+        "slug": "postgresql",
+        "color": "#4169E1"
+      }
+    ]
+  },
+  "Supabase": {
+    "marks": [
+      {
+        "slug": "supabase",
+        "color": "#3FCF8E"
+      }
+    ]
+  },
+  "MongoDB": {
+    "marks": [
+      {
+        "slug": "mongodb",
+        "color": "#47A248"
+      }
+    ]
+  },
+  "Firebase": {
+    "marks": [
+      {
+        "slug": "firebase",
+        "color": "#FFA000"
+      }
+    ]
+  },
+  "ETL / ELT pipelines": {
+    "icon": "Workflow"
+  },
+  "Web scraping": {
+    "icon": "Globe"
+  },
+  "Power BI": {
+    "marks": [
+      {
+        "slug": "powerbi",
+        "color": "#E7B416"
+      }
+    ]
+  },
+  "Supabase Auth": {
+    "marks": [
+      {
+        "slug": "supabase",
+        "color": "#3FCF8E"
+      }
+    ]
+  },
+  "JWT": {
+    "marks": [
+      {
+        "slug": "jsonwebtokens",
+        "color": "#D63AFF"
+      }
+    ],
+    "icon": "KeyRound"
+  },
+  "Stripe": {
+    "marks": [
+      {
+        "slug": "stripe",
+        "color": "#635BFF"
+      }
+    ]
+  },
+  "Verified webhooks": {
+    "icon": "BadgeCheck"
+  },
+  "Docker": {
+    "marks": [
+      {
+        "slug": "docker",
+        "color": "#2496ED"
+      }
+    ]
+  },
+  "AWS": {
+    "marks": [
+      {
+        "slug": "amazonwebservices",
+        "color": "#FF9900"
+      },
+      {
+        "slug": "amazonaws",
+        "color": "#FF9900"
+      }
+    ],
+    "icon": "Cloud"
+  },
+  "CI checks": {
+    "icon": "GitBranch"
+  },
+  "Monitoring": {
+    "icon": "Activity"
+  },
+  "n8n": {
+    "marks": [
+      {
+        "slug": "n8n",
+        "color": "#EA4B71"
+      }
+    ]
+  },
+  "Retool": {
+    "marks": [
+      {
+        "slug": "retool",
+        "color": "#3D3D3D"
+      }
+    ]
+  },
+  "OpenAI & Anthropic APIs": {
+    "marks": [
+      {
+        "slug": "openai",
+        "color": "#10A37F"
+      },
+      {
+        "slug": "anthropic",
+        "color": "#D97757"
+      }
+    ],
+    "mode": "all",
+    "icon": "Boxes"
+  },
+  "LangChain": {
+    "marks": [
+      {
+        "slug": "langchain",
+        "color": "#1C3C3C"
+      }
+    ]
+  },
+  "Vector databases": {
+    "icon": "Boxes"
+  },
+  "Blender": {
+    "marks": [
+      {
+        "slug": "blender",
+        "color": "#E87D0D"
+      }
+    ]
+  },
+  "Three.js": {
+    "marks": [
+      {
+        "slug": "threedotjs",
+        "color": "#0A0A0A"
+      }
+    ]
+  },
+  "DaVinci Resolve": {
+    "marks": [
+      {
+        "slug": "davinciresolve",
+        "color": "#233A51"
+      }
+    ]
+  }
+}

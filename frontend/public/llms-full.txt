@@ -1,0 +1,128 @@
+# Devilon Studio
+
+> Devilon Studio is a small engineering team that audits and hardens apps built with AI tools such as Lovable, Bolt, Replit and Cursor. An audit reviews security, access control, payments, data and deployment, and returns a written report in five working days with a fixed quote to fix what is found. Audits start from $490. We also automate manual work, build data pipelines and dashboards, and build web, mobile and AI features.
+
+## Start here
+- [App audit](https://www.devilonstudio.com/ai-to-production): A fixed-price production-readiness audit for apps built with AI tools. Written report, honest fix-or-rebuild recommendation, and a fixed quote.
+- [Sample report](https://www.devilonstudio.com/sample-audit): See what a Devilon audit report looks like: findings, severity, fixes and effort, in an illustrative sample.
+- [Contact](https://www.devilonstudio.com/contact): Tell us what you're trying to build, fix or automate. We'll figure out whether we're the right team for it.
+
+## Services
+- [Product Builds & MVPs](https://www.devilonstudio.com/services/product-engineering): SaaS products, platforms and dashboards, built AI-accelerated and engineer-owned from day one.
+- [Mobile Apps](https://www.devilonstudio.com/services/mobile-apps): Cross-platform mobile apps with real backends, push notifications and store release support.
+- [Operations Automation](https://www.devilonstudio.com/services/automation-internal-tools): Connect the tools you already use, remove the copy-paste, and put your data on one dashboard.
+- [Data Engineering & Analytics](https://www.devilonstudio.com/services/data-engineering): Pipelines, databases and dashboards: get your data out of spreadsheets and silos, cleaned, connected and on a dashboard people trust.
+- [AI Integration](https://www.devilonstudio.com/services/ai-integration): Assistants, document processing and search over your own data, wired into real systems with human handoff.
+- [Agency Delivery](https://www.devilonstudio.com/services/white-label-delivery): Clients want software with someone accountable behind it. We own the technical side, under your brand.
+- [3D & Interactive Experiences](https://www.devilonstudio.com/services/interactive-3d): Product visualization, interactive 3D on the web and configurators for products that are easier to show than describe.
+
+## About
+- [About](https://www.devilonstudio.com/about): A small engineering team that audits and hardens AI-built apps and automates manual work for small teams.
+- [Agency partnerships](https://www.devilonstudio.com/agency-partnerships): Your client needs software someone is accountable for. Devilon delivers the engineering behind your brand.
+- [Sample builds](https://www.devilonstudio.com/case-studies): Representative builds across product engineering, automation and mobile.
+
+## Contact
+- Email: hello@devilonstudio.com
+
+## Questions and answers
+### What do you need from me?
+Read access to the code (a repo invite or an export), a short walkthrough of what the app does, and a test account. We don't need production data.
+
+### Will you change my app during the audit?
+No. The audit is read-only. Fixes are quoted separately and only start when you say yes.
+
+### Do you sign an NDA?
+Yes. We'll sign yours, or send ours, before you share any code.
+
+### My app isn't built on Lovable or Bolt. Can you still audit it?
+Yes. AI-built apps are our focus because they share predictable gaps, but the review applies to any web app on a stack we know: React, Next.js, Node, Python and Postgres.
+
+### How is the price set?
+Fixed, and shown as a "from" price ($490 and up) depending on the size of the app. We confirm the exact fee before we start.
+
+### What happens after the report?
+You decide. Fix it yourself using the report, ask us for a fixed quote, or hand it to another developer. The report is yours either way.
+
+### Does an audit guarantee my app is secure?
+No. It reviews the areas listed in the report and tells you what we found. No review can guarantee the absence of vulnerabilities.
+
+## Page summaries
+### Your AI-built app works. Is it ready for real users?
+https://www.devilonstudio.com/
+Devilon Studio is a small engineering team that audits and hardens apps built with AI tools such as Lovable, Bolt, Replit and Cursor. An audit reviews security, access control, payments, data and deployment, and returns a written report in five working days with a fixed quote to fix what is found. Audits start from $490. We also automate manual work, build data pipelines and dashboards, and build web, mobile and AI features.
+
+### Is your AI-built app ready for real users?
+https://www.devilonstudio.com/ai-to-production
+A fixed-price audit of apps built with Lovable, Bolt, Replit, Cursor and similar tools. We review access control, auth and secrets, payments, data and deployment, then give you a written report, a fix-or-rebuild recommendation and a fixed quote. From $490, report in five working days. An audit is not a guarantee that an app is free of vulnerabilities.
+
+### What an audit looks like
+https://www.devilonstudio.com/sample-audit
+An illustrative sample report showing the format and depth of a Devilon audit: seven example findings, each with a severity, a plain-English explanation, a fix and an effort estimate. It is not from a client engagement.
+
+### Three things we do first, and a few we also build
+https://www.devilonstudio.com/services
+Most clients start with an app audit, an operations automation project or a data engineering project. We also build products and MVPs, mobile apps, AI integrations, 3D experiences, and provide white-label delivery for agencies.
+
+### Product Builds & MVPs
+https://www.devilonstudio.com/services/product-engineering
+We build new products with AI tooling doing the heavy typing and engineers doing the architecture, data model, security and review.
+
+### Mobile Apps
+https://www.devilonstudio.com/services/mobile-apps
+One codebase for iOS and Android where that makes sense. We handle the app, the API behind it and store submission.
+
+### Operations Automation
+https://www.devilonstudio.com/services/automation-internal-tools
+Workflow automation with n8n and custom code, integrations between existing tools, reporting dashboards and internal admin tools.
+
+### Data Engineering & Analytics
+https://www.devilonstudio.com/services/data-engineering
+We build ETL and ELT pipelines, web scraping and API data collection, databases and dashboards, so your data is collected, cleaned, connected and reported on automatically.
+
+### AI Integration
+https://www.devilonstudio.com/services/ai-integration
+We add AI where it earns its place: answering questions from your documents, extracting data from files and classifying requests, with guardrails.
+
+### Agency Delivery
+https://www.devilonstudio.com/services/white-label-delivery
+White-label engineering for agencies and studios: client portals, web apps, dashboards and integrations, delivered under your brand, with an NDA first.
+
+### 3D & Interactive Experiences
+https://www.devilonstudio.com/services/interactive-3d
+3D modeling and renders in Blender and interactive 3D for the web, including product configurators.
+
+### Your client needs software. You don't need an engineering department.
+https://www.devilonstudio.com/agency-partnerships
+Devilon works behind the scenes as a technical delivery partner for branding, design and marketing agencies. You keep the client relationship and the brand; we handle the engineering, with an NDA first and a clean handover.
+
+### How we build, by example
+https://www.devilonstudio.com/case-studies
+Representative builds that show how we approach each type of project. They are not client work.
+
+### AI-Built SaaS, Production-Hardened
+https://www.devilonstudio.com/case-studies/saas-dashboard-platform
+A representative build, AI-Built SaaS, Production-Hardened, created to show how we approach this kind of project. It makes no claims about real users or results.
+
+### Operations Automation Hub
+https://www.devilonstudio.com/case-studies/internal-operations-system
+A representative build, Operations Automation Hub, created to show how we approach this kind of project. It makes no claims about real users or results.
+
+### Cross-Platform Mobile Product
+https://www.devilonstudio.com/case-studies/mobile-product-platform
+A representative build, Cross-Platform Mobile Product, created to show how we approach this kind of project. It makes no claims about real users or results.
+
+### Software is easier to start. We help you finish it.
+https://www.devilonstudio.com/about
+Devilon Studio is a small engineering team, started in 2025 and made up of five people covering web, mobile, data and automation, AI and 3D. Our mission is to make software dependable for the people who rely on it.
+
+### Have something that needs to be built?
+https://www.devilonstudio.com/contact
+Send us a message, or email hello@devilonstudio.com. Tell us what you are trying to build, fix or automate.
+
+### Privacy Policy
+https://www.devilonstudio.com/privacy
+How Devilon Studio collects, uses and protects personal information from the contact form, email and outreach, and your rights over it.
+
+### Terms of Service
+https://www.devilonstudio.com/terms
+The basics of using the Devilon Studio website and how app audits and project work are handled, including what an audit does and does not guarantee.
